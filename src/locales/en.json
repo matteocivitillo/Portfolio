@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Computer Engineering & HCID Student passionate about user interfaces and modern digital experiences.",
+    "projectsBtn": "View Projects",
+    "contactBtn": "Contact Me"
+  },
+  "about": {
+    "title": "I create digital experiences that ",
+    "highlight": "inspire",
+    "description1": "I am a developer and designer currently pursuing a Double Degree in Human-Computer Interaction and Design at EIT Digital (Politecnico di Milano and Aalto University).",
+    "description2": "My strong background in Computer Engineering, combined with my passion for UI/UX, allows me to bridge the gap between technical implementation and user needs.",
+    "stats": {
+      "projects": "Developed Projects",
+      "universities": "EIT Digital Universities",
+      "paper": "Paper in progress (AI Guardrails)",
+      "curiosity": "Curiosity"
+    }
+  },
+  "projects": {
+    "title": "Featured ",
+    "highlight": "Projects",
+    "subtitle": "Explore my projects organized by category",
+    "explore": "Explore projects"
+  },
+  "category": {
+    "backBtn": "Back to Projects",
+    "notFound": "Category not found",
+    "backHome": "Back to Home",
+    "codeBtn": "Code",
+    "demoBtn": "Live Demo"
+  },
+  "skills": {
+    "title": "My ",
+    "highlight": "Skills",
+    "subtitle": "Technologies and tools I use to bring ideas to life"
+  },
+  "contact": {
+    "badge": "Contact Me",
+    "title": "Let's Work ",
+    "highlight": "Together",
+    "subtitle": "Have a project in mind? Contact me and let's discuss how I can help.",
+    "infoTitle": "Contact Information",
+    "infoDesc": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+    "email": "Email",
+    "cv": "Curriculum Vitae",
+    "downloadCv": "Download PDF",
+    "location": "Location",
+    "mapDescription": "Places I've worked",
+    "formTitle": "Send a Message",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What do you want to talk about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Your message...",
+    "submitBtn": "Send Message",
+    "successAlert": "Thank you for your message! I'll get back to you as soon as possible."
+  },
+  "footer": {
+    "brandDesc": "Computer Engineering & HCID Student passionate about user interfaces and modern digital experiences.",
+    "quickLinks": "Quick Links",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to receive updates on my projects",
+    "newsletterPlaceholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  }
+}

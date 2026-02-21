@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "projects": "Progetti",
+    "skills": "Competenze",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "greeting": "Ciao, sono",
+    "role": "Computer Engineering & HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
+    "projectsBtn": "Vedi Progetti",
+    "contactBtn": "Contattami"
+  },
+  "about": {
+    "title": "Creo esperienze digitali che ",
+    "highlight": "ispirano",
+    "description1": "Sono uno sviluppatore e designer attualmente impegnato in una Double Degree in Human-Computer Interaction and Design presso EIT Digital (Politecnico di Milano e Aalto University).",
+    "description2": "Il mio solido background in Ingegneria Informatica, unito alla mia passione per la UI/UX, mi permette di colmare il divario tra l'implementazione tecnica e i bisogni degli utenti.",
+    "stats": {
+      "projects": "Progetti Sviluppati",
+      "universities": "EIT Digital Universities",
+      "paper": "Paper in stesura (AI Guardrails)",
+      "curiosity": "Curiosità"
+    }
+  },
+  "projects": {
+    "title": "Progetti in ",
+    "highlight": "Evidenza",
+    "subtitle": "Esplora i miei progetti organizzati per categoria",
+    "explore": "Esplora progetti"
+  },
+  "category": {
+    "backBtn": "Torna ai Progetti",
+    "notFound": "Categoria non trovata",
+    "backHome": "Torna alla Home",
+    "codeBtn": "Codice",
+    "demoBtn": "Demo Live"
+  },
+  "skills": {
+    "title": "Le Mie ",
+    "highlight": "Competenze",
+    "subtitle": "Tecnologie e strumenti che utilizzo per dare vita alle idee"
+  },
+  "contact": {
+    "badge": "Contattami",
+    "title": "Lavoriamo ",
+    "highlight": "Insieme",
+    "subtitle": "Hai un progetto in mente? Contattami e discutiamo come posso aiutarti",
+    "infoTitle": "Informazioni di Contatto",
+    "infoDesc": "Sono sempre aperto a discutere nuovi progetti, idee creative o opportunità per far parte delle tue visioni.",
+    "email": "Email",
+    "cv": "Curriculum Vitae",
+    "downloadCv": "Scarica il PDF",
+    "location": "Posizione",
+    "mapDescription": "Posti in cui ho lavorato",
+    "formTitle": "Invia un Messaggio",
+    "nameLabel": "Nome Completo",
+    "namePlaceholder": "Il tuo nome",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tua@email.com",
+    "subjectLabel": "Oggetto",
+    "subjectPlaceholder": "Di cosa vuoi parlare?",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Il tuo messaggio...",
+    "submitBtn": "Invia Messaggio",
+    "successAlert": "Grazie per il tuo messaggio! Ti risponderò al più presto."
+  },
+  "footer": {
+    "brandDesc": "Computer Engineering & HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
+    "quickLinks": "Link Rapidi",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Iscriviti per ricevere aggiornamenti sui miei progetti",
+    "newsletterPlaceholder": "tua@email.com",
+    "subscribe": "Iscriviti",
+    "rights": "Tutti i diritti riservati."
+  }
+}
