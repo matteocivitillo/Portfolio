@@ -37,6 +37,89 @@
     "codeBtn": "Code",
     "demoBtn": "Live Demo"
   },
+  "categories": {
+    "ricerca": {
+      "title": "Research",
+      "description": "Research and development projects exploring new technologies and methodologies",
+      "projects": [
+        {
+          "title": "LLM Guardrails Research",
+          "description": "Research on safety guardrails for Large Language Models",
+          "longDescription": "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores the development and implementation of safety mechanisms to mitigate risks and promote responsible deployment of Artificial Intelligence, with an academic paper currently in progress."
+        },
+        {
+          "title": "SynergyAI",
+          "description": "AI-powered platform for business partnerships",
+          "longDescription": "Pre-seed startup developed during the High-Tech Entrepreneurship course at Politecnico di Milano. The project aims to facilitate B2B partnerships through AI-based matchmaking for exploring market opportunities."
+        }
+      ]
+    },
+    "full-stack": {
+      "title": "Full-Stack Development",
+      "description": "Complete web applications with modern frontend and robust backend",
+      "projects": [
+        {
+          "title": "Artendity",
+          "description": "Interactive web application to discover your own \"Art DNA\"",
+          "longDescription": "Developed for the Design of WWW Services course. Artendity allows users to take a visual quiz to discover their artistic preferences, receiving personalized recommendations and navigating an interactive gallery."
+        },
+        {
+          "title": "Yoga Website",
+          "description": "Interactive website dedicated to Yoga",
+          "longDescription": "Built for the Hypermedia Applications course, this website combines a full-stack architecture with interactive multimedia content, offering an optimized user experience with a focus on responsive design."
+        }
+      ]
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "Native and cross-platform mobile applications for iOS and Android",
+      "projects": [
+        {
+          "title": "Flutter Flame Memory Game",
+          "description": "Cross-platform memory card game powered by the Flame engine",
+          "longDescription": "A device-agnostic memory game developed in Flutter with responsive interfaces. It features persistent level progression using Hive and adopts a robust state management approach."
+        }
+      ]
+    },
+    "xr": {
+      "title": "XR Projects",
+      "description": "Virtual, augmented, and mixed reality projects",
+      "projects": [
+        {
+          "title": "Hololimb",
+          "description": "XR app for rehabilitation through visual illusion",
+          "longDescription": "In collaboration with i3lab (Polimi), Hololimb is a Meta Quest 3 app aimed at reducing Phantom Limb Pain (PLP) by simulating a virtual limb to support patient rehabilitation therapy."
+        },
+        {
+          "title": "CodingVirtualWorlds",
+          "description": "Programming and simulation of interactive worlds in VR",
+          "longDescription": "Project for the Coding Virtual Worlds course: design and implementation of multiple interactive VR environments for Meta Quest 3, culminating in the development of a networked multiplayer game."
+        }
+      ]
+    },
+    "consultancy": {
+      "title": "Consultancy",
+      "description": "Strategic consulting and technology implementation projects",
+      "projects": [
+        {
+          "title": "HR Consulting - SACE S.p.A.",
+          "description": "UX evaluation and engagement of HR tools",
+          "longDescription": "Team project on behalf of the Italian agency SACE, aimed at evaluating the usability and adoption of internal HR tools such as Workday and Coursera. Includes qualitative analysis through targeted interviews."
+        }
+      ]
+    },
+    "ux-oriented": {
+      "title": "UX-Oriented",
+      "description": "Projects focused on user experience and design thinking",
+      "projects": [
+        {
+          "title": "HCI Research & Prototyping",
+          "description": "Design and analysis of interactive systems",
+          "longDescription": "Development of three Human-Computer Interaction projects following the HCD approach (ISO 9241-210), including mental model analysis and high-fidelity prototype design with user testing."
+        }
+      ]
+    }
+  },
   "skills": {
     "title": "My ",
     "highlight": "Skills",

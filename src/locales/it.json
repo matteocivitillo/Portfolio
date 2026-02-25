@@ -37,6 +37,89 @@
     "codeBtn": "Codice",
     "demoBtn": "Demo Live"
   },
+  "categories": {
+    "ricerca": {
+      "title": "Ricerca",
+      "description": "Progetti di ricerca e sviluppo che esplorano nuove tecnologie e metodologie",
+      "projects": [
+        {
+          "title": "LLM Guardrails Research",
+          "description": "Ricerca su safety guardrails per Large Language Models",
+          "longDescription": "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora lo sviluppo e l'implementazione di meccanismi di sicurezza per mitigare i rischi e promuovere un deployment responsabile dell'Intelligenza Artificiale, con un paper accademico attualmente in fase di stesura."
+        },
+        {
+          "title": "SynergyAI",
+          "description": "Piattaforma AI-powered per partnership aziendali",
+          "longDescription": "Startup pre-seed sviluppata nel corso di High-Tech Entrepreneurship al Politecnico di Milano. Il progetto mira a facilitare le partnership B2B tramite matchmaking basato su intelligenza artificiale per l'esplorazione di opportunità di mercato."
+        }
+      ]
+    },
+    "full-stack": {
+      "title": "Full-Stack Development",
+      "description": "Applicazioni web complete con frontend moderno e backend robusto",
+      "projects": [
+        {
+          "title": "Artendity",
+          "description": "Applicazione web iterattiva per scoprire la propria \"Art DNA\"",
+          "longDescription": "Sviluppato per il corso Design of WWW Services. Artendity permette agli utenti di eseguire un quiz visivo per scoprire le proprie preferenze artistiche, ricevendo raccomandazioni personalizzate e navigando una galleria interattiva."
+        },
+        {
+          "title": "Yoga Website",
+          "description": "Sito web interattivo dedicato allo Yoga",
+          "longDescription": "Costruito per il corso Hypermedia Applications, questo sito web combina un'architettura full-stack con contenuti multimediali interattivi, offrendo un'esperienza utente ottimizzata e focus sul design responsivo."
+        }
+      ]
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "Applicazioni mobile native e cross-platform per iOS e Android",
+      "projects": [
+        {
+          "title": "Flutter Flame Memory Game",
+          "description": "Memory card game cross-platform alimentato da motore Flame",
+          "longDescription": "Un gioco di memoria device-agnostic sviluppato in Flutter, con interfacce responsive. Offre una progressione dei livelli persistente utilizzando Hive e adotta un robusto approccio di state management."
+        }
+      ]
+    },
+    "xr": {
+      "title": "XR Projects",
+      "description": "Progetti di realtà virtuale, aumentata e mista",
+      "projects": [
+        {
+          "title": "Hololimb",
+          "description": "App XR per la riabilitazione attraverso l'illusione visiva",
+          "longDescription": "In collaborazione con i3lab (Polimi), Hololimb è un'app per Meta Quest 3 mirata a ridurre il dolore da arto fantasma (PLP), simulando un arto virtuale a supporto della terapia di riabilitazione del paziente."
+        },
+        {
+          "title": "CodingVirtualWorlds",
+          "description": "Programmazione e simulazione di mondi interattivi in VR",
+          "longDescription": "Progetto per il corso Coding Virtual Worlds: design e implementazione di molteplici ambienti VR interattivi per Meta Quest 3, culminato nello sviluppo di un gioco multiplayer in rete."
+        }
+      ]
+    },
+    "consultancy": {
+      "title": "Consultancy",
+      "description": "Progetti di consulenza strategica e implementazione tecnologica",
+      "projects": [
+        {
+          "title": "HR Consulting - SACE S.p.A.",
+          "description": "Valutazione UX ed engagement degli strumenti HR",
+          "longDescription": "Progetto di team per conto dell'agenzia italiana SACE, volto a valutare l'usabilità e adozione degli strumenti HR interni come Workday e Coursera. Include analisi qualitativa attraverso interviste mirate."
+        }
+      ]
+    },
+    "ux-oriented": {
+      "title": "UX-Oriented",
+      "description": "Progetti focalizzati sull'esperienza utente e design thinking",
+      "projects": [
+        {
+          "title": "HCI Research & Prototyping",
+          "description": "Design e analisi di sistemi interattivi",
+          "longDescription": "Sviluppo di tre progetti in ottica Human-Computer Interaction seguendo l'approccio HCD (ISO 9241-210), che includono analisi di modelli mentali e progettazione di prototipi ad alta fedeltà con test degli utenti."
+        }
+      ]
+    }
+  },
   "skills": {
     "title": "Le Mie ",
     "highlight": "Competenze",
