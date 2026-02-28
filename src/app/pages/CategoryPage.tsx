@@ -4,9 +4,10 @@ import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { useTranslation } from 'react-i18next';
+import { IframePreview } from '../components/IframePreview';
 
 // Static metadata: only non-translatable data (images, tags, links)
-const categoryMeta: Record<string, { projects: { image: string; tags: string[]; github?: string; demo?: string }[] }> = {
+const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: string; tags: string[]; github?: string; demo?: string }[] }> = {
   'ricerca': {
     projects: [
       {
@@ -23,13 +24,17 @@ const categoryMeta: Record<string, { projects: { image: string; tags: string[]; 
     projects: [
       {
         image: 'https://images.unsplash.com/photo-1721864428830-7417b93831b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHBvcnRmb2xpbyUyMHdlYnNpdGV8ZW58MXx8fHwxNzcxNTU1MTIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        iframeUrl: 'https://artendity.vercel.app/',
         tags: ['Svelte', 'Node.js', 'PostgreSQL', 'UI/UX Design'],
         github: 'https://github.com/matteocivitillo/artendity',
+        demo: 'https://artendity.vercel.app/',
       },
       {
         image: 'https://images.unsplash.com/photo-1630522790858-50b4ef44944b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzcxNTAyOTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        iframeUrl: 'https://hypermedia-applications-rho.vercel.app/',
         tags: ['Node.js', 'JavaScript', 'Python', 'Responsive Design'],
         github: 'https://github.com/matteocivitillo/hypermedia_applications',
+        demo: 'https://hypermedia-applications-rho.vercel.app/',
       },
     ],
   },
@@ -135,16 +140,20 @@ export function CategoryPage() {
                 className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   } gap-12 items-center`}
               >
-                {/* Image */}
+                {/* Image / Live Preview */}
                 <div className="w-full lg:w-1/2">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                    <img
-                      src={project.image}
-                      alt={projectTitle}
-                      className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
+                  {project.iframeUrl ? (
+                    <IframePreview url={project.iframeUrl} title={projectTitle} />
+                  ) : (
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                      <img
+                        src={project.image}
+                        alt={projectTitle}
+                        className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
