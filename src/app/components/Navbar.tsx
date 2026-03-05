@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'motion/react';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
+  const [recentlyClicked, setRecentlyClicked] = useState<string | null>(null);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   
@@ -15,11 +16,11 @@ export function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
-    { id: 'home', name: t('nav.home'), href: '/#home' },
-    { id: 'about', name: t('nav.about'), href: '/#about' },
-    { id: 'projects', name: t('nav.projects'), href: '/#projects' },
-    { id: 'skills', name: t('nav.skills'), href: '/#skills' },
-    { id: 'contact', name: t('nav.contact'), href: '/#contact' },
+    { id: 'home', name: t('nav.home'), href: '#home' },
+    { id: 'about', name: t('nav.about'), href: '#about' },
+    { id: 'projects', name: t('nav.projects'), href: '#projects' },
+    { id: 'skills', name: t('nav.skills'), href: '#skills' },
+    { id: 'contact', name: t('nav.contact'), href: '#contact' },
   ];
 
   // Track active section based on scroll
@@ -27,33 +28,60 @@ export function Navbar() {
     if (!isHomePage) return;
     
     const handleScroll = () => {
+      // Don't update if user just clicked - wait for scroll to finish
+      if (recentlyClicked) return;
+      
       const sections = navLinks.map(link => link.id);
       let current = 'home';
+      let closestDistance = Infinity;
       
-      for (const section of sections) {
-        const element = document.getElementById(section);
+      // Find which section is closest to the top of the viewport
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // If the top of the section is near the top of the viewport
-          if (rect.top <= 150) {
-            current = section;
+          const elementTop = rect.top;
+          
+          // Calculate the center of the viewport (approximate scroll position)
+          // We want to find the section whose top is closest to the middle of what's visible
+          const distanceFromTop = Math.abs(elementTop);
+          
+          // Prefer sections that are in the upper half of the viewport
+          if (elementTop < window.innerHeight && elementTop > -rect.height) {
+            if (distanceFromTop < closestDistance) {
+              closestDistance = distanceFromTop;
+              current = sectionId;
+            }
           }
         }
       }
       setActiveTab(current);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [navLinks, isHomePage]);
+  }, [navLinks, isHomePage, recentlyClicked]);
 
   const handleNavClick = (href: string, id: string) => {
     setIsOpen(false);
     setActiveTab(id);
+    setRecentlyClicked(id);
     
-    // If we're not on home page and clicking a hash link, navigate to home first
-    if (!isHomePage && href.startsWith('/#')) {
-      window.location.href = href;
+    // Reset the recently clicked state after scroll animation completes
+    setTimeout(() => setRecentlyClicked(null), 1000);
+    
+    // If we're not on home page and clicking a hash link, navigate to home with the hash
+    if (!isHomePage && href.startsWith('#')) {
+      // Navigate to home page with the hash
+      window.location.href = window.location.origin + window.location.pathname + href;
+    } else if (href.startsWith('#')) {
+      // Scroll to element with a small delay to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 0);
     }
   };
 

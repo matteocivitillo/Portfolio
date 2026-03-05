@@ -1,21 +1,24 @@
-import { createHashRouter } from 'react-router';
+import { createBrowserRouter } from 'react-router';
 import { Root } from './Root';
 import { Home } from './pages/Home';
 import { CategoryPage } from './pages/CategoryPage';
 
-export const router = createHashRouter([
-  {
-    path: '/',
-    Component: Root,
-    children: [
-      {
-        index: true,
-        Component: Home,
-      },
-      {
-        path: 'progetti/:categoryId',
-        Component: CategoryPage,
-      },
-    ],
-  },
-]);
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      Component: Root,
+      children: [
+        {
+          index: true,
+          Component: Home,
+        },
+        {
+          path: 'progetti/:categoryId',
+          Component: CategoryPage,
+        },
+      ],
+    },
+  ],
+  { basename: '/Portfolio/' }
+);
