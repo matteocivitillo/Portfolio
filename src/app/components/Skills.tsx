@@ -1,96 +1,101 @@
 import { Code2, Palette, Globe, Layers, Package } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { ScrollTypewriter } from './ScrollTypewriter';
+import { ScrollReveal } from './ScrollReveal';
 
 export function Skills() {
   const { t } = useTranslation();
 
   const skillCategories = [
     {
-      title: 'Linguaggi di Programmazione',
+      title: t('skills.categories.languages'),
       icon: <Code2 size={24} />,
       color: 'text-blue-600 dark:text-blue-400',
       bgColor: 'bg-blue-100 dark:bg-blue-900/40',
       skills: ['C/C++', 'C#', 'Java', 'Python', 'JavaScript', 'TypeScript', 'Dart', 'SQL', 'VHDL', 'LaTeX'],
     },
     {
-      title: 'Framework & Librerie',
+      title: t('skills.categories.frameworks'),
       icon: <Layers size={24} />,
       color: 'text-purple-600 dark:text-purple-400',
       bgColor: 'bg-purple-100 dark:bg-purple-900/40',
       skills: ['React', 'Node.js', 'Flutter', 'Svelte', 'Vite', 'Supabase'],
     },
     {
-      title: 'IDE & Strumenti (Software)',
+      title: t('skills.categories.tools'),
       icon: <Package size={24} />,
       color: 'text-orange-600 dark:text-orange-400',
       bgColor: 'bg-orange-100 dark:bg-orange-900/40',
       skills: ['JetBrains (CLion, IntelliJ)', 'VS Code', 'Unity', 'Figma', 'Docker', 'MySQL', 'Git & GitHub', 'Vercel', 'Colab'],
     },
     {
-      title: 'Design & Prototipazione',
+      title: t('skills.categories.design'),
       icon: <Palette size={24} />,
       color: 'text-pink-600 dark:text-pink-400',
       bgColor: 'bg-pink-100 dark:bg-pink-900/40',
       skills: ['Figma', 'User Research', 'User Testing', 'UX/UI Design', 'Wireframing', 'Prototyping'],
     },
     {
-      title: 'Soft Skills & Certificazioni',
+      title: t('skills.categories.soft'),
       icon: <Globe size={24} />,
       color: 'text-indigo-600 dark:text-indigo-400',
       bgColor: 'bg-indigo-100 dark:bg-indigo-900/40',
-      skills: ['TOEIC C1 (Inglese)', 'Francese Base', 'Strategy and Marketing', 'Document Intelligence (genAI)'],
+      skills: [t('skills.soft.english'), t('skills.soft.french'), 'Strategy and Marketing', 'Document Intelligence (genAI)'],
     },
   ];
 
+  const skillsTitle = t('skills.title') + t('skills.highlight');
+
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 transition-colors">
+    <div className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm mb-4">
-            {t('nav.skills')}
-          </div>
-          <h2 className="text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
-            {t('skills.title')}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-              {t('skills.highlight')}
-            </span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">
-            {t('skills.subtitle')}
-          </p>
+        <div className="text-center mb-20">
+          <ScrollTypewriter
+            text={skillsTitle}
+            highlightText={t('skills.highlight')}
+            highlightClassName="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
+            className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground"
+            speed={50}
+          />
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-lg dark:hover:shadow-purple-900/20 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300"
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-4 mb-6">
-                <div className={`p-3 rounded-lg ${category.bgColor} ${category.color}`}>
-                  {category.icon}
+        {/* Premium Bento Skills Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
+          {skillCategories.map((category, index) => {
+            const spanClass = index < 2 ? 'lg:col-span-3' : 'lg:col-span-2';
+            return (
+              <ScrollReveal key={index} delay={index * 150} direction="up" className={`h-full ${spanClass}`}>
+                <div className="group relative h-full p-8 rounded-[2rem] border border-gray-200/50 dark:border-white/5 bg-white/40 dark:bg-card/40 backdrop-blur-xl hover:bg-white/60 dark:hover:bg-card/60 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                  
+                  {/* Subtle hover glow background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/5 dark:to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className={`p-4 rounded-2xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 ${category.color} group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500`}>
+                        {category.icon}
+                      </div>
+                      <h3 className="text-2xl font-medium text-foreground tracking-tight">{category.title}</h3>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      {category.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-4 py-2 bg-white/60 dark:bg-muted/80 backdrop-blur-md border border-gray-200/50 dark:border-border/50 text-gray-800 dark:text-foreground rounded-xl text-sm font-medium hover:bg-white dark:hover:bg-muted hover:shadow-md hover:scale-105 transition-all duration-300"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-xl text-gray-900 dark:text-white">{category.title}</h3>
-              </div>
-
-              {/* Skills List */}
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 rounded-lg text-sm transition-colors"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

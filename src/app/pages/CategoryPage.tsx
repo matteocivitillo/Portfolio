@@ -5,18 +5,26 @@ import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { useTranslation } from 'react-i18next';
 import { IframePreview } from '../components/IframePreview';
+import { HoverVideoPlayer } from '../components/HoverVideoPlayer';
+import { PdfPreview } from '../components/PdfPreview';
+import usabilityReportPdf from '../../pdf/HYP_Usability_Evaluation_Report.pdf';
+import designPdf from '../../pdf/HYP_Design.pdf';
+import hciPdf from '../../pdf/HCI_3_assignment.pdf';
+import finalReportPdf from '../../pdf/Final Report.pdf';
+import hololimbVideo from '../../images/HololimbDemo.mp4';
+import codingVirtualWorldsVideo from '../../images/DemoXR.mp4';
 
 // Static metadata: only non-translatable data (images, tags, links)
-const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: string; tags: string[]; github?: string; demo?: string }[] }> = {
+const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: string; videoUrl?: string; pdfUrl?: string; tags: string[]; github?: string; demo?: string }[] }> = {
   'ricerca': {
     projects: [
       {
-        image: 'https://images.unsplash.com/photo-1762427354251-f008b64dbc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXNlYXJjaCUyMGRhdGElMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MTU4MTgwOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
         tags: ['AI Safety', 'LLM', 'Python', 'Academic Research'],
       },
       {
-        image: 'https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBtZWV0aW5nfGVufDF8fHx8MTc3MTQ4Nzg2OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        tags: ['Business Strategy', 'AI Matchmaking', 'Lean Startup'],
+        image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        tags: ['Extended Reality', 'Cross Reality', 'Phantom Limb Pain'],
       },
     ],
   },
@@ -31,10 +39,10 @@ const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: stri
       },
       {
         image: 'https://images.unsplash.com/photo-1630522790858-50b4ef44944b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzcxNTAyOTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        iframeUrl: 'https://hypermedia-applications-rho.vercel.app/',
+        iframeUrl: 'https://serendipity-delta.vercel.app/',
         tags: ['Node.js', 'JavaScript', 'Python', 'Responsive Design'],
-        github: 'https://github.com/matteocivitillo/hypermedia_applications',
-        demo: 'https://hypermedia-applications-rho.vercel.app/',
+        github: 'https://github.com/matteocivitillo/serendipity',
+        demo: 'https://serendipity-delta.vercel.app/',
       },
     ],
   },
@@ -42,8 +50,17 @@ const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: stri
     projects: [
       {
         image: 'https://images.unsplash.com/photo-1762341119237-98df67c9c3c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXZlbG9wbWVudCUyMHBob25lfGVufDF8fHx8MTc3MTQ4ODk2OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        iframeUrl: 'https://matteocivitillo.github.io/flutter-flame-memory/',
         tags: ['Flutter', 'Dart', 'Flame Engine', 'Hive'],
         github: 'https://github.com/matteocivitillo/flutter-flame-memory',
+        demo: 'https://matteocivitillo.github.io/flutter-flame-memory/',
+      },
+      {
+        image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+        iframeUrl: 'https://matteocivitillo.github.io/Breakout/',
+        tags: ['Flutter', 'Dart', 'Flame Engine', 'Game Dev'],
+        github: 'https://github.com/matteocivitillo/Breakout',
+        demo: 'https://matteocivitillo.github.io/Breakout/',
       },
     ],
   },
@@ -51,11 +68,13 @@ const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: stri
     projects: [
       {
         image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aXJ0dWFsJTIwcmVhbGl0eSUyMGhlYWRzZXR8ZW58MXx8fHwxNzcxNTc5NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        videoUrl: hololimbVideo,
         tags: ['Unity', 'C#', 'Meta Quest 3', 'HCI'],
         github: 'https://github.com/matteocivitillo/AUI-Hololimb',
       },
       {
         image: 'https://images.unsplash.com/photo-1707758967860-19106a5e9ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdWxsJTIwc3RhY2slMjBkZXZlbG9wbWVudCUyMGNvZGV8ZW58MXx8fHwxNzcxNTg1ODQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        videoUrl: codingVirtualWorldsVideo,
         tags: ['Unity', 'Multiplayer Networking', '3D Modeling'],
         github: 'https://github.com/matteocivitillo/CodingVirtualWorlds',
       },
@@ -64,7 +83,8 @@ const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: stri
   'consultancy': {
     projects: [
       {
-        image: 'https://images.unsplash.com/photo-1765020553734-2c050ddb9494?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBtZWV0aW5nfGVufDF8fHx8MTc3MTQ4Nzg2OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        image: '',
+        pdfUrl: finalReportPdf,
         tags: ['UX Research', 'Qualitative Analysis', 'Tool Evaluation'],
         github: 'https://github.com/matteocivitillo/Digital-Business-Lab',
       },
@@ -73,8 +93,20 @@ const categoryMeta: Record<string, { projects: { image: string; iframeUrl?: stri
   'ux-oriented': {
     projects: [
       {
-        image: 'https://images.unsplash.com/photo-1698434156098-68e834638679?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwZXhwZXJpZW5jZSUyMGRlc2lnbiUyMHdpcmVmcmFtZXxlbnwxfHx8fDE3NzE0ODEyMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+        image: '',
+        pdfUrl: hciPdf,
         tags: ['Figma Prototyping', 'User Testing', 'Mental-Model UI Analysis'],
+        github: 'https://github.com/matteocivitillo/HCI-Course-Projects',
+      },
+      {
+        image: '',
+        pdfUrl: usabilityReportPdf,
+        tags: ['UX Research', 'Heuristic Evaluation', 'User Testing', 'HCI Analysis'],
+      },
+      {
+        image: '',
+        pdfUrl: designPdf,
+        tags: ['UI Design', 'Figma Prototyping', 'Information Architecture', 'HCD Approach'],
       },
     ],
   },
@@ -92,7 +124,7 @@ export function CategoryPage() {
 
   if (!meta || !categoryId) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 transition-colors">
+      <div className="min-h-screen flex items-center justify-center bg-background transition-colors duration-300">
         <div className="text-center">
           <h1 className="text-4xl mb-4 text-gray-900 dark:text-white">{t('category.notFound')}</h1>
           <Link to="/">
@@ -107,7 +139,7 @@ export function CategoryPage() {
   const categoryDescription = t(`categories.${categoryId}.description`);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors pt-24 pb-20">
+    <div className="min-h-screen bg-background transition-colors duration-300 pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
         <a href="/#projects">
@@ -144,6 +176,17 @@ export function CategoryPage() {
                 <div className="w-full lg:w-1/2">
                   {project.iframeUrl ? (
                     <IframePreview url={project.iframeUrl} title={projectTitle} />
+                    ) : project.pdfUrl ? (
+                    <PdfPreview
+                      pdfUrl={project.pdfUrl}
+                      title={projectTitle}
+                    />
+                    ) : project.videoUrl ? (
+                    <HoverVideoPlayer
+                      videoUrl={project.videoUrl}
+                      posterUrl={project.image}
+                      title={projectTitle}
+                    />
                   ) : (
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                       <img

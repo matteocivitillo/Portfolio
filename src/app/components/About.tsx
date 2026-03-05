@@ -1,90 +1,79 @@
-import { Award, Code, Coffee, Users } from 'lucide-react';
+import { Award, Code, Lightbulb, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { ScrollTypewriter } from './ScrollTypewriter';
+import { ScrollReveal } from './ScrollReveal';
+import laureaImg from '../../images/laurea.jpeg';
+import xrImg from '../../images/XR.jpeg';
 
 export function About() {
   const { t } = useTranslation();
 
   const stats = [
     { icon: <Code size={24} />, value: '15+', label: t('about.stats.projects') },
-    { icon: <Users size={24} />, value: '2', label: t('about.stats.universities') },
-    { icon: <Award size={24} />, value: '1', label: t('about.stats.paper') },
-    { icon: <Coffee size={24} />, value: '∞', label: t('about.stats.curiosity') },
+    { icon: <Users size={24} />, value: '3', label: t('about.stats.universities') },
+    { icon: <Award size={24} />, value: '2', label: t('about.stats.paper') },
+    { icon: <Lightbulb size={24} />, value: '∞', label: t('about.stats.curiosity') },
   ];
 
+  const aboutTitle = t('about.title') + t('about.highlight');
+
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 transition-colors">
+    <div className="py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-6">
-            <div className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm">
-              {t('nav.about')}
-            </div>
-            
-            <h2 className="text-4xl sm:text-5xl text-gray-900 dark:text-white">
-              {t('about.title')}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-                {t('about.highlight')}
-              </span>
-            </h2>
-            
-            <p className="text-lg text-gray-600 dark:text-gray-200">
-              {t('about.description1')}
-            </p>
 
-            <p className="text-lg text-gray-600 dark:text-gray-200">
-              {t('about.description2')}
-            </p>
+        {/* Centered typewriter title */}
+        <div className="text-center mb-20">
+          <ScrollTypewriter
+            text={aboutTitle}
+            highlightText={t('about.highlight')}
+            highlightClassName="bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent"
+            className="text-3xl sm:text-5xl lg:text-7xl font-bold text-foreground"
+            speed={50}
+          />
+        </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6 pt-8">
+        {/* Stats (left) + Images (right) – 50/50 split */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Stats grid – left half */}
+          <ScrollReveal delay={200}>
+            <div className="grid grid-cols-2 gap-12">
               {stats.map((stat, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="text-blue-600 dark:text-blue-400">{stat.icon}</div>
-                  <div className="text-3xl text-gray-900 dark:text-white">{stat.value}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
-                </div>
+                <ScrollReveal key={index} delay={300 + index * 200}>
+                  <div className="space-y-3">
+                    <div className="text-blue-600 dark:text-blue-400">{stat.icon}</div>
+                    <div className="text-5xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-base text-muted-foreground">{stat.label}</div>
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
+          </ScrollReveal>
+
+          {/* 2 Images – right half, taller with original proportions */}
+          <div className="grid grid-cols-2 gap-6">
+            <ScrollReveal delay={400} direction="right">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={laureaImg}
+                  alt="Laurea"
+                  className="w-full aspect-[3/4] object-cover"
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={600} direction="right">
+              <div className="rounded-2xl overflow-hidden shadow-lg mt-10">
+                <img
+                  src={xrImg}
+                  alt="XR Experience"
+                  className="w-full aspect-[3/4] object-cover"
+                />
+              </div>
+            </ScrollReveal>
           </div>
 
-          {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1630522790858-50b4ef44944b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzcxNTAyOTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Web Design"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1661246627162-feb0269e0c07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzcxNDY2OTg2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Mobile Design"
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-            </div>
-            <div className="space-y-4 pt-8">
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1759984782050-981de6a25d55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1eCUyMHVpJTIwZGVzaWduJTIwcHJvamVjdHxlbnwxfHx8fDE3NzE1ODMzMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="UX Design"
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1762787863004-767d5d7eac07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGVzaWdufGVufDF8fHx8MTc3MTQ3NzU3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Branding"
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

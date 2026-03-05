@@ -48,9 +48,9 @@
           "longDescription": "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores the development and implementation of safety mechanisms to mitigate risks and promote responsible deployment of Artificial Intelligence, with an academic paper currently in progress."
         },
         {
-          "title": "SynergyAI",
-          "description": "AI-powered platform for business partnerships",
-          "longDescription": "Pre-seed startup developed during the High-Tech Entrepreneurship course at Politecnico di Milano. The project aims to facilitate B2B partnerships through AI-based matchmaking for exploring market opportunities."
+          "title": "HoloLimb-CR",
+          "description": "Portable Cross-Reality (CR) system to support phantom limb pain therapy.",
+          "longDescription": "HoloLimb-CR is an innovative AR/VR rehabilitation platform for the non-pharmacological management of Phantom Limb Pain (PLP). Developed for Meta Quest 3, the architecture enables seamless transitions between virtual and augmented environments, offering structured therapeutic exercises and accurate anatomical tracking in an experience optimized for independent home use. The related research paper ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') has been accepted at the ICIR 2026 international conference."
         }
       ]
     },
@@ -78,6 +78,11 @@
           "title": "Flutter Flame Memory Game",
           "description": "Cross-platform memory card game powered by the Flame engine",
           "longDescription": "A device-agnostic memory game developed in Flutter with responsive interfaces. It features persistent level progression using Hive and adopts a robust state management approach."
+        },
+        {
+          "title": "Breakout Game",
+          "description": "Cross-platform Breakout clone built with Flutter and Flame",
+          "longDescription": "A modern take on the classic Breakout arcade game, developed using Flutter and the Flame engine. It features responsive design, collision detection, and smooth gameplay mechanics."
         }
       ]
     },
@@ -103,8 +108,8 @@
       "projects": [
         {
           "title": "HR Consulting - SACE S.p.A.",
-          "description": "UX evaluation and engagement of HR tools",
-          "longDescription": "Team project on behalf of the Italian agency SACE, aimed at evaluating the usability and adoption of internal HR tools such as Workday and Coursera. Includes qualitative analysis through targeted interviews."
+          "description": "Strategic and technical recommendations to enhance HR digital tools",
+          "longDescription": "Consulting project for SACE S.p.A. developed during the Digital Business Innovation Lab course. The goal was to evaluate and improve the adoption of internal HR platforms (Workday, Coursera, SAM Chatbot). Based on qualitative analysis and user research, we designed 'SACE Human+', a 3-pillar AI-powered ecosystem featuring a gamified app for employees (GrowPlay), an AI decision-support dashboard for managers, and a social community platform."
         }
       ]
     },
@@ -114,16 +119,45 @@
       "projects": [
         {
           "title": "HCI Research & Prototyping",
-          "description": "Design and analysis of interactive systems",
-          "longDescription": "Development of three Human-Computer Interaction projects following the HCD approach (ISO 9241-210), including mental model analysis and high-fidelity prototype design with user testing."
+          "description": "Three HCI assignments covering theory, UX research, and prototyping",
+          "longDescription": "Portfolio of three assignments completed for the Human–Computer Interaction course at Aalto University, spanning the full HCD process (ISO 9241-210). The work includes a comparative evaluation of digital and physical products using usability and UX frameworks, a mental-model analysis of Gmail's interface with redesign proposals to reduce cognitive load, and SmaWat — a child-centered smartwatch designed through paper prototyping, Figma hi-fi prototyping, and formative Wizard-of-Oz evaluations."
+        },
+        {
+          "title": "HCI Research: Dolomiti Superski Usability Report",
+          "description": "In-depth usability evaluation of the Dolomiti Superski portal",
+          "longDescription": "Comprehensive user-experience evaluation conducted on the Dolomiti Superski web portal. The work combined an Expert Evaluation based on Nielsen's heuristics and the MILE framework, followed by a User Testing phase with 20 participants to measure the Weighted Success Rate (WSR). The analysis identified critical gaps in information architecture and proposed targeted redesign solutions to optimize usage efficiency."
+        },
+        {
+          "title": "Serendipity Yoga: Full-Stack Design & Prototyping",
+          "description": "End-to-end design of a web platform for a yoga center",
+          "longDescription": "End-to-end design of a web platform for a yoga center focused on holistic well-being. The process included defining the C-IDM schema for content organization, creating low-fidelity wireframes, and developing a high-fidelity interactive prototype in Figma. Special attention was given to responsive design and user interaction flows (User Stories) to ensure smooth, intuitive navigation."
         }
       ]
     }
   },
+  "carousel": {
+    "ricerca": "Research and scientific publications",
+    "full-stack": "Complete web applications",
+    "mobile": "Native and cross-platform apps",
+    "xr": "Virtual and augmented reality",
+    "consultancy": "Strategic consulting & tech",
+    "ux-oriented": "Design thinking & UX"
+  },
   "skills": {
     "title": "My ",
     "highlight": "Skills",
-    "subtitle": "Technologies and tools I use to bring ideas to life"
+    "subtitle": "Technologies and tools I use to bring ideas to life",
+    "categories": {
+      "languages": "Programming Languages",
+      "frameworks": "Frameworks & Libraries",
+      "tools": "IDE & Tools (Software)",
+      "design": "Design & Prototyping",
+      "soft": "Soft Skills & Certifications"
+    },
+    "soft": {
+      "english": "TOEIC C1 (English)",
+      "french": "Basic French"
+    }
   },
   "contact": {
     "badge": "Contact Me",
@@ -136,6 +170,7 @@
     "cv": "Curriculum Vitae",
     "downloadCv": "Download PDF",
     "location": "Location",
+    "locationValue": "Milan, Italy",
     "mapDescription": "Places I've worked",
     "formTitle": "Send a Message",
     "nameLabel": "Full Name",

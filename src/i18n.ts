@@ -15,7 +15,7 @@ i18n
         translation: itTranslation,
       },
     },
-    lng: 'en', // default language
+    lng: localStorage.getItem('language') || 'en', // persist language across refreshes
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false, // react already safes from xss

@@ -48,9 +48,9 @@
           "longDescription": "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora lo sviluppo e l'implementazione di meccanismi di sicurezza per mitigare i rischi e promuovere un deployment responsabile dell'Intelligenza Artificiale, con un paper accademico attualmente in fase di stesura."
         },
         {
-          "title": "SynergyAI",
-          "description": "Piattaforma AI-powered per partnership aziendali",
-          "longDescription": "Startup pre-seed sviluppata nel corso di High-Tech Entrepreneurship al Politecnico di Milano. Il progetto mira a facilitare le partnership B2B tramite matchmaking basato su intelligenza artificiale per l'esplorazione di opportunità di mercato."
+          "title": "HoloLimb-CR",
+          "description": "Sistema portatile Cross-Reality (CR) per supportare la terapia del dolore da arto fantasma.",
+          "longDescription": "HoloLimb-CR è un'innovativa piattaforma di riabilitazione AR/VR per la gestione non farmacologica del dolore da arto fantasma (PLP). Sviluppata per Meta Quest 3, l'architettura garantisce transizioni fluide tra ambienti virtuali e aumentati, offrendo esercizi terapeutici strutturati e tracciamento anatomico accurato in un'esperienza ottimizzata per l'uso domestico e indipendente. Il paper relativo allo studio ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') è stato accettato alla conferenza internazionale ICIR 2026."
         }
       ]
     },
@@ -78,6 +78,11 @@
           "title": "Flutter Flame Memory Game",
           "description": "Memory card game cross-platform alimentato da motore Flame",
           "longDescription": "Un gioco di memoria device-agnostic sviluppato in Flutter, con interfacce responsive. Offre una progressione dei livelli persistente utilizzando Hive e adotta un robusto approccio di state management."
+        },
+        {
+          "title": "Breakout Game",
+          "description": "Clone cross-platform di Breakout sviluppato con Flutter e Flame",
+          "longDescription": "Una rivisitazione moderna del classico gioco arcade Breakout, sviluppata utilizzando Flutter e il motore Flame. Presenta un design responsivo, rilevamento delle collisioni e meccaniche di gioco fluide."
         }
       ]
     },
@@ -103,8 +108,8 @@
       "projects": [
         {
           "title": "HR Consulting - SACE S.p.A.",
-          "description": "Valutazione UX ed engagement degli strumenti HR",
-          "longDescription": "Progetto di team per conto dell'agenzia italiana SACE, volto a valutare l'usabilità e adozione degli strumenti HR interni come Workday e Coursera. Include analisi qualitativa attraverso interviste mirate."
+          "description": "Raccomandazioni strategiche e tecniche per migliorare i tool HR digitali",
+          "longDescription": "Progetto di consulenza per SACE S.p.A. sviluppato durante il corso Digital Business Innovation Lab. L'obiettivo era valutare e migliorare l'adozione delle piattaforme HR interne (Workday, Coursera, SAM Chatbot). Sulla base di analisi qualitative e user research, abbiamo progettato 'SACE Human+', un ecosistema basato sull'AI sviluppato su 3 pilastri che include un'app gamificata per i dipendenti (GrowPlay), una dashboard di supporto decisionale AI per i manager e una piattaforma di community."
         }
       ]
     },
@@ -114,16 +119,45 @@
       "projects": [
         {
           "title": "HCI Research & Prototyping",
-          "description": "Design e analisi di sistemi interattivi",
-          "longDescription": "Sviluppo di tre progetti in ottica Human-Computer Interaction seguendo l'approccio HCD (ISO 9241-210), che includono analisi di modelli mentali e progettazione di prototipi ad alta fedeltà con test degli utenti."
+          "description": "Tre assignment HCI su teoria, UX research e prototipazione",
+          "longDescription": "Portfolio di tre assignment realizzati per il corso di Human–Computer Interaction presso Aalto University, coprendo l'intero processo HCD (ISO 9241-210). Il lavoro include una valutazione comparativa di prodotti digitali e fisici tramite framework di usabilità e UX, un'analisi dei modelli mentali dell'interfaccia Gmail con proposte di redesign per ridurre il carico cognitivo, e SmaWat — uno smartwatch progettato per bambini attraverso paper prototyping, prototipazione hi-fi su Figma e valutazioni formative Wizard-of-Oz."
+        },
+        {
+          "title": "HCI Research: Dolomiti Superski Usability Report",
+          "description": "Valutazione approfondita dell'usabilità del portale Dolomiti Superski",
+          "longDescription": "Valutazione approfondita dell'esperienza utente condotta sul portale Dolomiti Superski. Il lavoro ha combinato un'Expert Evaluation basata sulle euristiche di Nielsen e del framework MILE, seguita da una fase di User Testing con 20 partecipanti per misurare il Weighted Success Rate (WSR). L'analisi ha permesso di identificare gap critici nell'architettura dell'informazione e proporre soluzioni di redesign mirate all'ottimizzazione dell'efficienza d'uso."
+        },
+        {
+          "title": "Serendipity Yoga: Full-Stack Design & Prototyping",
+          "description": "Progettazione end-to-end di una piattaforma web per un centro yoga",
+          "longDescription": "Progettazione end-to-end di una piattaforma web per un centro yoga, focalizzata sul benessere olistico. Il processo ha incluso la definizione dello schema C-IDM per l'organizzazione dei contenuti, la creazione di wireframe a bassa fedeltà e lo sviluppo di un prototipo interattivo ad alta fedeltà su Figma. Particolare attenzione è stata posta al responsive design e ai flussi di interazione degli utenti (User Stories) per garantire una navigazione fluida e intuitiva."
         }
       ]
     }
   },
+  "carousel": {
+    "ricerca": "Ricerca e pubblicazioni scientifiche",
+    "full-stack": "Applicazioni web complete",
+    "mobile": "App native e cross-platform",
+    "xr": "Realtà virtuale e aumentata",
+    "consultancy": "Consulenza strategica e tech",
+    "ux-oriented": "Design thinking e UX"
+  },
   "skills": {
     "title": "Le Mie ",
     "highlight": "Competenze",
-    "subtitle": "Tecnologie e strumenti che utilizzo per dare vita alle idee"
+    "subtitle": "Tecnologie e strumenti che utilizzo per dare vita alle idee",
+    "categories": {
+      "languages": "Linguaggi di Programmazione",
+      "frameworks": "Framework & Librerie",
+      "tools": "IDE & Strumenti (Software)",
+      "design": "Design & Prototipazione",
+      "soft": "Soft Skills & Certificazioni"
+    },
+    "soft": {
+      "english": "TOEIC C1 (Inglese)",
+      "french": "Francese Base"
+    }
   },
   "contact": {
     "badge": "Contattami",
@@ -136,6 +170,7 @@
     "cv": "Curriculum Vitae",
     "downloadCv": "Scarica il PDF",
     "location": "Posizione",
+    "locationValue": "Milano, Italia",
     "mapDescription": "Posti in cui ho lavorato",
     "formTitle": "Invia un Messaggio",
     "nameLabel": "Nome Completo",
