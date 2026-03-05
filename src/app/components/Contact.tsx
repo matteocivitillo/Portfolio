@@ -20,7 +20,7 @@ export function Contact() {
       icon: <FileText size={24} />,
       label: t("contact.cv"),
       value: t("contact.downloadCv"),
-      href: "/cv.pdf",
+      href: "src\\pdf\\Matteo_Civitillo_CV.pdf",
       download: true,
     },
     {
