@@ -5,6 +5,24 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Portfolio Matteo Civitillo</title>
+      <script type="text/javascript">
+  // Questo script legge il parametro 'p' e ripristina l'URL corretto nel router della SPA
+  (function(l) {
+    if (l.search[1] === '/' ) {
+      var decoded = l.search.slice(1).split('&').map(function(s) { 
+        return s.replace(/~and~/g, '&') 
+      }).filter(function(v) {
+        return v.indexOf('p=/') === 0;
+      })[0];
+      if (decoded !== undefined) {
+        var path = decoded.slice(3);
+        if (path !== l.pathname.slice(1)) {
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + path + l.hash);
+        }
+      }
+    }
+  }(window.location));
+</script>
     </head>
 
     <body>
