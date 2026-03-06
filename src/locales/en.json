@@ -1,203 +1,203 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact"
-  },
-  "hero": {
-    "greeting": "Hi, I'm",
-    "role": "Computer Engineering & HCID Student passionate about user interfaces and modern digital experiences.",
-    "projectsBtn": "View Projects",
-    "contactBtn": "About Me"
-  },
-  "about": {
-    "title": "I create digital experiences that ",
-    "highlight": "inspire",
-    "description1": "I am a developer and designer currently pursuing a Double Degree in Human-Computer Interaction and Design at EIT Digital (Politecnico di Milano and Aalto University).",
-    "description2": "My strong background in Computer Engineering, combined with my passion for UI/UX, allows me to bridge the gap between technical implementation and user needs.",
-    "stats": {
-      "projects": "Developed Projects",
-      "universities": "EIT Digital Universities",
-      "paper": "Paper in progress (AI Guardrails)",
-      "curiosity": "Curiosity"
-    },
-    "sectionJourneyTitle": "My background and journey.",
-    "sectionApproachTitle": "Where design, technology, and entrepreneurship meet.",
-    "description3": "I believe the best digital experiences are built at the intersection of strong engineering and human-centered design, with a clear focus on usability.",
-    "description4": "My minor in Innovation and Entrepreneurship, together with courses such as Strategy and Marketing, strengthened my orientation toward the entrepreneurial and startup world.",
-    "interestsTitle": "My interests and hobbies",
-    "interestsSubtitle": "Some photos I am attached to from my recent period",
-    "interestsBody": "I am a big fan of music of all kinds, I play the clarinet, and I enjoy sports and traveling. Some of these images capture moments from my recent period that are especially meaningful to me."
-  },
-  "projects": {
-    "title": "Featured ",
-    "highlight": "Projects",
-    "subtitle": "Explore my projects organized by category",
-    "explore": "Explore projects"
-  },
-  "category": {
-    "backBtn": "Back to Projects",
-    "notFound": "Category not found",
-    "backHome": "Back to Home",
-    "codeBtn": "Code",
-    "demoBtn": "Live Demo"
-  },
-  "categories": {
-    "ricerca": {
-      "title": "Research",
-      "description": "Research and development projects exploring new technologies and methodologies",
-      "projects": [
-        {
-          "title": "LLM Guardrails Research",
-          "description": "Research on safety guardrails for Large Language Models",
-          "longDescription": "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores the development and implementation of safety mechanisms to mitigate risks and promote responsible deployment of Artificial Intelligence, with an academic paper currently in progress."
-        },
-        {
-          "title": "HoloLimb-CR",
-          "description": "Portable Cross-Reality (CR) system to support phantom limb pain therapy.",
-          "longDescription": "HoloLimb-CR is an innovative AR/VR rehabilitation platform for the non-pharmacological management of Phantom Limb Pain (PLP). Developed for Meta Quest 3, the architecture enables seamless transitions between virtual and augmented environments, offering structured therapeutic exercises and accurate anatomical tracking in an experience optimized for independent home use. The related research paper ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') has been accepted at the ICIR 2026 international conference."
-        }
-      ]
-    },
-    "full-stack": {
-      "title": "Full-Stack Development",
-      "description": "Complete web applications with modern frontend and robust backend",
-      "projects": [
-        {
-          "title": "Artendity",
-          "description": "Interactive web application to discover your own \"Art DNA\"",
-          "longDescription": "Developed for the Design of WWW Services course. Artendity allows users to take a visual quiz to discover their artistic preferences, receiving personalized recommendations and navigating an interactive gallery."
-        },
-        {
-          "title": "Yoga Website",
-          "description": "Interactive website dedicated to Yoga",
-          "longDescription": "Built for the Hypermedia Applications course, this website combines a full-stack architecture with interactive multimedia content, offering an optimized user experience with a focus on responsive design."
-        }
-      ]
-    },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": "Native and cross-platform mobile applications for iOS and Android",
-      "projects": [
-        {
-          "title": "Flutter Flame Memory Game",
-          "description": "Cross-platform memory card game powered by the Flame engine",
-          "longDescription": "A device-agnostic memory game developed in Flutter with responsive interfaces. It features persistent level progression using Hive and adopts a robust state management approach."
-        },
-        {
-          "title": "Breakout Game",
-          "description": "Cross-platform Breakout clone built with Flutter and Flame",
-          "longDescription": "A modern take on the classic Breakout arcade game, developed using Flutter and the Flame engine. It features responsive design, collision detection, and smooth gameplay mechanics."
-        }
-      ]
-    },
-    "xr": {
-      "title": "XR Projects",
-      "description": "Virtual, augmented, and mixed reality projects",
-      "projects": [
-        {
-          "title": "Hololimb",
-          "description": "XR app for rehabilitation through visual illusion",
-          "longDescription": "In collaboration with i3lab (Polimi), Hololimb is a Meta Quest 3 app aimed at reducing Phantom Limb Pain (PLP) by simulating a virtual limb to support patient rehabilitation therapy."
-        },
-        {
-          "title": "CodingVirtualWorlds",
-          "description": "Programming and simulation of interactive worlds in VR",
-          "longDescription": "Project for the Coding Virtual Worlds course: design and implementation of multiple interactive VR environments for Meta Quest 3, culminating in the development of a networked multiplayer game."
-        }
-      ]
-    },
-    "consultancy": {
-      "title": "Consultancy",
-      "description": "Strategic consulting and technology implementation projects",
-      "projects": [
-        {
-          "title": "HR Consulting - SACE S.p.A.",
-          "description": "Strategic and technical recommendations to enhance HR digital tools",
-          "longDescription": "Consulting project for SACE S.p.A. developed during the Digital Business Innovation Lab course. The goal was to evaluate and improve the adoption of internal HR platforms (Workday, Coursera, SAM Chatbot). Based on qualitative analysis and user research, we designed 'SACE Human+', a 3-pillar AI-powered ecosystem featuring a gamified app for employees (GrowPlay), an AI decision-support dashboard for managers, and a social community platform."
-        }
-      ]
-    },
-    "ux-oriented": {
-      "title": "UX-Oriented",
-      "description": "Projects focused on user experience and design thinking",
-      "projects": [
-        {
-          "title": "HCI Research & Prototyping",
-          "description": "Three HCI assignments covering theory, UX research, and prototyping",
-          "longDescription": "Portfolio of three assignments completed for the Human–Computer Interaction course at Aalto University, spanning the full HCD process (ISO 9241-210). The work includes a comparative evaluation of digital and physical products using usability and UX frameworks, a mental-model analysis of Gmail's interface with redesign proposals to reduce cognitive load, and SmaWat — a child-centered smartwatch designed through paper prototyping, Figma hi-fi prototyping, and formative Wizard-of-Oz evaluations."
-        },
-        {
-          "title": "HCI Research: Dolomiti Superski Usability Report",
-          "description": "In-depth usability evaluation of the Dolomiti Superski portal",
-          "longDescription": "Comprehensive user-experience evaluation conducted on the Dolomiti Superski web portal. The work combined an Expert Evaluation based on Nielsen's heuristics and the MILE framework, followed by a User Testing phase with 20 participants to measure the Weighted Success Rate (WSR). The analysis identified critical gaps in information architecture and proposed targeted redesign solutions to optimize usage efficiency."
-        },
-        {
-          "title": "Serendipity Yoga: Full-Stack Design & Prototyping",
-          "description": "End-to-end design of a web platform for a yoga center",
-          "longDescription": "End-to-end design of a web platform for a yoga center focused on holistic well-being. The process included defining the C-IDM schema for content organization, creating low-fidelity wireframes, and developing a high-fidelity interactive prototype in Figma. Special attention was given to responsive design and user interaction flows (User Stories) to ensure smooth, intuitive navigation."
-        }
-      ]
-    }
-  },
-  "carousel": {
-    "ricerca": "Research and scientific publications",
-    "full-stack": "Complete web applications",
-    "mobile": "Native and cross-platform apps",
-    "xr": "Virtual and augmented reality",
-    "consultancy": "Strategic consulting & tech",
-    "ux-oriented": "Design thinking & UX"
-  },
-  "skills": {
-    "title": "My ",
-    "highlight": "Skills",
-    "subtitle": "Technologies and tools I use to bring ideas to life",
-    "categories": {
-      "languages": "Programming Languages",
-      "frameworks": "Frameworks & Libraries",
-      "tools": "IDE & Tools (Software)",
-      "design": "Design & Prototyping",
-      "soft": "Soft Skills & Certifications"
-    },
-    "soft": {
-      "english": "TOEIC C1 (English)",
-      "french": "Basic French"
-    }
-  },
-  "contact": {
-    "badge": "Contact Me",
-    "title": "Let's Work ",
-    "highlight": "Together",
-    "subtitle": "Have a project in mind? Contact me and let's discuss how I can help.",
-    "infoTitle": "Contact Information",
-    "infoDesc": "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
-    "email": "Email",
-    "cv": "Curriculum Vitae",
-    "downloadCv": "Download PDF",
-    "location": "Location",
-    "locationValue": "Milan, Italy",
-    "mapDescription": "Places I've worked",
-    "formTitle": "Send a Message",
-    "nameLabel": "Full Name",
-    "namePlaceholder": "Your name",
-    "emailLabel": "Email",
-    "emailPlaceholder": "your@email.com",
-    "subjectLabel": "Subject",
-    "subjectPlaceholder": "What do you want to talk about?",
-    "messageLabel": "Message",
-    "messagePlaceholder": "Your message...",
-    "submitBtn": "Send Message",
-    "successAlert": "Thank you for your message! I'll get back to you as soon as possible."
-  },
-  "footer": {
-    "brandDesc": "Computer Engineering & HCID Student passionate about user interfaces and modern digital experiences.",
-    "quickLinks": "Quick Links",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Subscribe to receive updates on my projects",
-    "newsletterPlaceholder": "your@email.com",
-    "subscribe": "Subscribe",
-    "rights": "All rights reserved."
-  }
+    "nav":  {
+                "home":  "Home",
+                "about":  "About",
+                "projects":  "Projects",
+                "skills":  "Skills",
+                "contact":  "Contact"
+            },
+    "hero":  {
+                 "greeting":  "Hi, I\u0027m",
+                 "role":  "Computer Engineering \u0026 HCID Student passionate about user interfaces and modern digital experiences.",
+                 "projectsBtn":  "View Projects",
+                 "contactBtn":  "About Me"
+             },
+    "about":  {
+                  "title":  "I create digital experiences that ",
+                  "highlight":  "inspire",
+                  "description1":  "I am a developer and designer currently pursuing a Double Degree in Human-Computer Interaction and Design at EIT Digital (Politecnico di Milano and Aalto University).",
+                  "description2":  "My strong background in Computer Engineering, combined with my passion for UI/UX, allows me to bridge the gap between technical implementation and user needs.",
+                  "stats":  {
+                                "projects":  "Developed Projects",
+                                "universities":  "EIT Digital Universities",
+                                "paper":  "Paper in progress (AI Guardrails)",
+                                "curiosity":  "Curiosity"
+                            },
+                  "sectionJourneyTitle":  "My background and journey.",
+                  "sectionApproachTitle":  "Where design, technology, and entrepreneurship meet.",
+                  "description3":  "I believe the best digital experiences are built at the intersection of strong engineering and human-centered design, with a clear focus on usability.",
+                  "description4":  "My minor in Innovation and Entrepreneurship, together with courses such as Strategy and Marketing, strengthened my orientation toward the entrepreneurial and startup world.",
+                  "interestsTitle":  "My interests and hobbies",
+                  "interestsSubtitle":  "Some photos I am attached to from my recent period",
+                  "interestsBody":  "I'm a huge fan of all kinds of music and I play the clarinet. I'm also passionate about sports, from soccer to skiing, and I love being outdoors, whether I'm hiking in the mountains or traveling.\n\nThese images capture some moments from my recent journey that are especially meaningful to me."
+              },
+    "projects":  {
+                     "title":  "Featured ",
+                     "highlight":  "Projects",
+                     "subtitle":  "Explore my projects organized by category",
+                     "explore":  "Explore projects"
+                 },
+    "category":  {
+                     "backBtn":  "Back to Projects",
+                     "notFound":  "Category not found",
+                     "backHome":  "Back to Home",
+                     "codeBtn":  "Code",
+                     "demoBtn":  "Live Demo"
+                 },
+    "categories":  {
+                       "ricerca":  {
+                                       "title":  "Research",
+                                       "description":  "Research and development projects exploring new technologies and methodologies",
+                                       "projects":  [
+                                                        {
+                                                            "title":  "LLM Guardrails Research",
+                                                            "description":  "Research on safety guardrails for Large Language Models",
+                                                            "longDescription":  "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores the development and implementation of safety mechanisms to mitigate risks and promote responsible deployment of Artificial Intelligence, with an academic paper currently in progress."
+                                                        },
+                                                        {
+                                                            "title":  "HoloLimb-CR",
+                                                            "description":  "Portable Cross-Reality (CR) system to support phantom limb pain therapy.",
+                                                            "longDescription":  "HoloLimb-CR is an innovative AR/VR rehabilitation platform for the non-pharmacological management of Phantom Limb Pain (PLP). Developed for Meta Quest 3, the architecture enables seamless transitions between virtual and augmented environments, offering structured therapeutic exercises and accurate anatomical tracking in an experience optimized for independent home use. The related research paper (\u0027HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality\u0027) has been accepted at the ICIR 2026 international conference."
+                                                        }
+                                                    ]
+                                   },
+                       "full-stack":  {
+                                          "title":  "Full-Stack Development",
+                                          "description":  "Complete web applications with modern frontend and robust backend",
+                                          "projects":  [
+                                                           {
+                                                               "title":  "Artendity",
+                                                               "description":  "Interactive web application to discover your own \"Art DNA\"",
+                                                               "longDescription":  "Developed for the Design of WWW Services course. Artendity allows users to take a visual quiz to discover their artistic preferences, receiving personalized recommendations and navigating an interactive gallery."
+                                                           },
+                                                           {
+                                                               "title":  "Yoga Website",
+                                                               "description":  "Interactive website dedicated to Yoga",
+                                                               "longDescription":  "Built for the Hypermedia Applications course, this website combines a full-stack architecture with interactive multimedia content, offering an optimized user experience with a focus on responsive design."
+                                                           }
+                                                       ]
+                                      },
+                       "mobile":  {
+                                      "title":  "Mobile Development",
+                                      "description":  "Native and cross-platform mobile applications for iOS and Android",
+                                      "projects":  [
+                                                       {
+                                                           "title":  "Flutter Flame Memory Game",
+                                                           "description":  "Cross-platform memory card game powered by the Flame engine",
+                                                           "longDescription":  "A device-agnostic memory game developed in Flutter with responsive interfaces. It features persistent level progression using Hive and adopts a robust state management approach."
+                                                       },
+                                                       {
+                                                           "title":  "Breakout Game",
+                                                           "description":  "Cross-platform Breakout clone built with Flutter and Flame",
+                                                           "longDescription":  "A modern take on the classic Breakout arcade game, developed using Flutter and the Flame engine. It features responsive design, collision detection, and smooth gameplay mechanics."
+                                                       }
+                                                   ]
+                                  },
+                       "xr":  {
+                                  "title":  "XR Projects",
+                                  "description":  "Virtual, augmented, and mixed reality projects",
+                                  "projects":  [
+                                                   {
+                                                       "title":  "Hololimb",
+                                                       "description":  "XR app for rehabilitation through visual illusion",
+                                                       "longDescription":  "In collaboration with i3lab (Polimi), Hololimb is a Meta Quest 3 app aimed at reducing Phantom Limb Pain (PLP) by simulating a virtual limb to support patient rehabilitation therapy."
+                                                   },
+                                                   {
+                                                       "title":  "CodingVirtualWorlds",
+                                                       "description":  "Programming and simulation of interactive worlds in VR",
+                                                       "longDescription":  "Project for the Coding Virtual Worlds course: design and implementation of multiple interactive VR environments for Meta Quest 3, culminating in the development of a networked multiplayer game."
+                                                   }
+                                               ]
+                              },
+                       "consultancy":  {
+                                           "title":  "Consultancy",
+                                           "description":  "Strategic consulting and technology implementation projects",
+                                           "projects":  [
+                                                            {
+                                                                "title":  "HR Consulting - SACE S.p.A.",
+                                                                "description":  "Strategic and technical recommendations to enhance HR digital tools",
+                                                                "longDescription":  "Consulting project for SACE S.p.A. developed during the Digital Business Innovation Lab course. The goal was to evaluate and improve the adoption of internal HR platforms (Workday, Coursera, SAM Chatbot). Based on qualitative analysis and user research, we designed \u0027SACE Human+\u0027, a 3-pillar AI-powered ecosystem featuring a gamified app for employees (GrowPlay), an AI decision-support dashboard for managers, and a social community platform."
+                                                            }
+                                                        ]
+                                       },
+                       "ux-oriented":  {
+                                           "title":  "UX-Oriented",
+                                           "description":  "Projects focused on user experience and design thinking",
+                                           "projects":  [
+                                                            {
+                                                                "title":  "HCI Research \u0026 Prototyping",
+                                                                "description":  "Three HCI assignments covering theory, UX research, and prototyping",
+                                                                "longDescription":  "Portfolio of three assignments completed for the Human–Computer Interaction course at Aalto University, spanning the full HCD process (ISO 9241-210). The work includes a comparative evaluation of digital and physical products using usability and UX frameworks, a mental-model analysis of Gmail\u0027s interface with redesign proposals to reduce cognitive load, and SmaWat — a child-centered smartwatch designed through paper prototyping, Figma hi-fi prototyping, and formative Wizard-of-Oz evaluations."
+                                                            },
+                                                            {
+                                                                "title":  "HCI Research: Dolomiti Superski Usability Report",
+                                                                "description":  "In-depth usability evaluation of the Dolomiti Superski portal",
+                                                                "longDescription":  "Comprehensive user-experience evaluation conducted on the Dolomiti Superski web portal. The work combined an Expert Evaluation based on Nielsen\u0027s heuristics and the MILE framework, followed by a User Testing phase with 20 participants to measure the Weighted Success Rate (WSR). The analysis identified critical gaps in information architecture and proposed targeted redesign solutions to optimize usage efficiency."
+                                                            },
+                                                            {
+                                                                "title":  "Serendipity Yoga: Full-Stack Design \u0026 Prototyping",
+                                                                "description":  "End-to-end design of a web platform for a yoga center",
+                                                                "longDescription":  "End-to-end design of a web platform for a yoga center focused on holistic well-being. The process included defining the C-IDM schema for content organization, creating low-fidelity wireframes, and developing a high-fidelity interactive prototype in Figma. Special attention was given to responsive design and user interaction flows (User Stories) to ensure smooth, intuitive navigation."
+                                                            }
+                                                        ]
+                                       }
+                   },
+    "carousel":  {
+                     "ricerca":  "Research and scientific publications",
+                     "full-stack":  "Complete web applications",
+                     "mobile":  "Native and cross-platform apps",
+                     "xr":  "Virtual and augmented reality",
+                     "consultancy":  "Strategic consulting \u0026 tech",
+                     "ux-oriented":  "Design thinking \u0026 UX"
+                 },
+    "skills":  {
+                   "title":  "My ",
+                   "highlight":  "Skills",
+                   "subtitle":  "Technologies and tools I use to bring ideas to life",
+                   "categories":  {
+                                      "languages":  "Programming Languages",
+                                      "frameworks":  "Frameworks \u0026 Libraries",
+                                      "tools":  "IDE \u0026 Tools (Software)",
+                                      "design":  "Design \u0026 Prototyping",
+                                      "soft":  "Soft Skills \u0026 Certifications"
+                                  },
+                   "soft":  {
+                                "english":  "TOEIC C1 (English)",
+                                "french":  "Basic French"
+                            }
+               },
+    "contact":  {
+                    "badge":  "Contact Me",
+                    "title":  "Let\u0027s Work ",
+                    "highlight":  "Together",
+                    "subtitle":  "Have a project in mind? Contact me and let\u0027s discuss how I can help.",
+                    "infoTitle":  "Contact Information",
+                    "infoDesc":  "I\u0027m always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+                    "email":  "Email",
+                    "cv":  "Curriculum Vitae",
+                    "downloadCv":  "Download PDF",
+                    "location":  "Location",
+                    "locationValue":  "Milan, Italy",
+                    "mapDescription":  "Places I\u0027ve worked",
+                    "formTitle":  "Send a Message",
+                    "nameLabel":  "Full Name",
+                    "namePlaceholder":  "Your name",
+                    "emailLabel":  "Email",
+                    "emailPlaceholder":  "your@email.com",
+                    "subjectLabel":  "Subject",
+                    "subjectPlaceholder":  "What do you want to talk about?",
+                    "messageLabel":  "Message",
+                    "messagePlaceholder":  "Your message...",
+                    "submitBtn":  "Send Message",
+                    "successAlert":  "Thank you for your message! I\u0027ll get back to you as soon as possible."
+                },
+    "footer":  {
+                   "brandDesc":  "Computer Engineering \u0026 HCID Student passionate about user interfaces and modern digital experiences.",
+                   "quickLinks":  "Quick Links",
+                   "newsletter":  "Newsletter",
+                   "newsletterDesc":  "Subscribe to receive updates on my projects",
+                   "newsletterPlaceholder":  "your@email.com",
+                   "subscribe":  "Subscribe",
+                   "rights":  "All rights reserved."
+               }
 }

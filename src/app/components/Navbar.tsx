@@ -44,8 +44,8 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 mt-4 pointer-events-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-center h-16 pointer-events-auto">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between md:justify-center h-16 pointer-events-auto">
           {/* Floating Pill Navigation (always expanded) */}
           <div className="flex items-center p-1 sm:p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
             {navLinks.map((link) => (
@@ -79,7 +79,7 @@ export function Navbar() {
           </div>
 
           {/* Right side controls */}
-          <div className="absolute right-0 flex items-center gap-2">
+          <div className="flex items-center gap-2 md:absolute md:right-0">
             <div className="flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
               <button
                 onClick={toggleLanguage}
@@ -103,3 +103,4 @@ export function Navbar() {
     </nav>
   );
 }
+

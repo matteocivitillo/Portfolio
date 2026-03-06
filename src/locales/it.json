@@ -1,203 +1,203 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "Chi Sono",
-    "projects": "Progetti",
-    "skills": "Competenze",
-    "contact": "Contatti"
-  },
-  "hero": {
-    "greeting": "Ciao, sono",
-    "role": "Computer Engineering & HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
-    "projectsBtn": "Vedi Progetti",
-    "contactBtn": "Chi Sono"
-  },
-  "about": {
-    "title": "Creo esperienze digitali che ",
-    "highlight": "ispirano",
-    "description1": "Sono uno sviluppatore e designer attualmente impegnato in una Double Degree in Human-Computer Interaction and Design presso EIT Digital (Politecnico di Milano e Aalto University).",
-    "description2": "Il mio solido background in Ingegneria Informatica, unito alla mia passione per la UI/UX, mi permette di colmare il divario tra l'implementazione tecnica e i bisogni degli utenti.",
-    "stats": {
-      "projects": "Progetti Sviluppati",
-      "universities": "EIT Digital Universities",
-      "paper": "Paper in stesura (AI Guardrails)",
-      "curiosity": "Curiosità"
-    },
-    "sectionJourneyTitle": "Il mio percorso.",
-    "sectionApproachTitle": "Tra design, tecnologia e imprenditorialita.",
-    "description3": "Credo che le migliori esperienze digitali nascano all'intersezione tra robustezza ingegneristica e design human-centered, con particolare attenzione alla semplicita d'uso.",
-    "description4": "Il minor in Innovation and Entrepreneurship, insieme a corsi come Strategy and Marketing, ha rafforzato il mio orientamento verso il mondo imprenditoriale e delle startup.",
-    "interestsTitle": "I miei interessi e hobby",
-    "interestsSubtitle": "Alcune foto a cui sono affezionato del mio ultimo periodo",
-    "interestsBody": "Sono un grande appassionato di musica di tutti i tipi, suono il clarinetto, mi piace fare sport e viaggiare. Alcune di queste immagini raccontano momenti a cui sono particolarmente affezionato del mio ultimo periodo."
-  },
-  "projects": {
-    "title": "Progetti in ",
-    "highlight": "Evidenza",
-    "subtitle": "Esplora i miei progetti organizzati per categoria",
-    "explore": "Esplora progetti"
-  },
-  "category": {
-    "backBtn": "Torna ai Progetti",
-    "notFound": "Categoria non trovata",
-    "backHome": "Torna alla Home",
-    "codeBtn": "Codice",
-    "demoBtn": "Demo Live"
-  },
-  "categories": {
-    "ricerca": {
-      "title": "Ricerca",
-      "description": "Progetti di ricerca e sviluppo che esplorano nuove tecnologie e metodologie",
-      "projects": [
-        {
-          "title": "LLM Guardrails Research",
-          "description": "Ricerca su safety guardrails per Large Language Models",
-          "longDescription": "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora lo sviluppo e l'implementazione di meccanismi di sicurezza per mitigare i rischi e promuovere un deployment responsabile dell'Intelligenza Artificiale, con un paper accademico attualmente in fase di stesura."
-        },
-        {
-          "title": "HoloLimb-CR",
-          "description": "Sistema portatile Cross-Reality (CR) per supportare la terapia del dolore da arto fantasma.",
-          "longDescription": "HoloLimb-CR è un'innovativa piattaforma di riabilitazione AR/VR per la gestione non farmacologica del dolore da arto fantasma (PLP). Sviluppata per Meta Quest 3, l'architettura garantisce transizioni fluide tra ambienti virtuali e aumentati, offrendo esercizi terapeutici strutturati e tracciamento anatomico accurato in un'esperienza ottimizzata per l'uso domestico e indipendente. Il paper relativo allo studio ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') è stato accettato alla conferenza internazionale ICIR 2026."
-        }
-      ]
-    },
-    "full-stack": {
-      "title": "Full-Stack Development",
-      "description": "Applicazioni web complete con frontend moderno e backend robusto",
-      "projects": [
-        {
-          "title": "Artendity",
-          "description": "Applicazione web iterattiva per scoprire la propria \"Art DNA\"",
-          "longDescription": "Sviluppato per il corso Design of WWW Services. Artendity permette agli utenti di eseguire un quiz visivo per scoprire le proprie preferenze artistiche, ricevendo raccomandazioni personalizzate e navigando una galleria interattiva."
-        },
-        {
-          "title": "Yoga Website",
-          "description": "Sito web interattivo dedicato allo Yoga",
-          "longDescription": "Costruito per il corso Hypermedia Applications, questo sito web combina un'architettura full-stack con contenuti multimediali interattivi, offrendo un'esperienza utente ottimizzata e focus sul design responsivo."
-        }
-      ]
-    },
-    "mobile": {
-      "title": "Mobile Development",
-      "description": "Applicazioni mobile native e cross-platform per iOS e Android",
-      "projects": [
-        {
-          "title": "Flutter Flame Memory Game",
-          "description": "Memory card game cross-platform alimentato da motore Flame",
-          "longDescription": "Un gioco di memoria device-agnostic sviluppato in Flutter, con interfacce responsive. Offre una progressione dei livelli persistente utilizzando Hive e adotta un robusto approccio di state management."
-        },
-        {
-          "title": "Breakout Game",
-          "description": "Clone cross-platform di Breakout sviluppato con Flutter e Flame",
-          "longDescription": "Una rivisitazione moderna del classico gioco arcade Breakout, sviluppata utilizzando Flutter e il motore Flame. Presenta un design responsivo, rilevamento delle collisioni e meccaniche di gioco fluide."
-        }
-      ]
-    },
-    "xr": {
-      "title": "XR Projects",
-      "description": "Progetti di realtà virtuale, aumentata e mista",
-      "projects": [
-        {
-          "title": "Hololimb",
-          "description": "App XR per la riabilitazione attraverso l'illusione visiva",
-          "longDescription": "In collaborazione con i3lab (Polimi), Hololimb è un'app per Meta Quest 3 mirata a ridurre il dolore da arto fantasma (PLP), simulando un arto virtuale a supporto della terapia di riabilitazione del paziente."
-        },
-        {
-          "title": "CodingVirtualWorlds",
-          "description": "Programmazione e simulazione di mondi interattivi in VR",
-          "longDescription": "Progetto per il corso Coding Virtual Worlds: design e implementazione di molteplici ambienti VR interattivi per Meta Quest 3, culminato nello sviluppo di un gioco multiplayer in rete."
-        }
-      ]
-    },
-    "consultancy": {
-      "title": "Consultancy",
-      "description": "Progetti di consulenza strategica e implementazione tecnologica",
-      "projects": [
-        {
-          "title": "HR Consulting - SACE S.p.A.",
-          "description": "Raccomandazioni strategiche e tecniche per migliorare i tool HR digitali",
-          "longDescription": "Progetto di consulenza per SACE S.p.A. sviluppato durante il corso Digital Business Innovation Lab. L'obiettivo era valutare e migliorare l'adozione delle piattaforme HR interne (Workday, Coursera, SAM Chatbot). Sulla base di analisi qualitative e user research, abbiamo progettato 'SACE Human+', un ecosistema basato sull'AI sviluppato su 3 pilastri che include un'app gamificata per i dipendenti (GrowPlay), una dashboard di supporto decisionale AI per i manager e una piattaforma di community."
-        }
-      ]
-    },
-    "ux-oriented": {
-      "title": "UX-Oriented",
-      "description": "Progetti focalizzati sull'esperienza utente e design thinking",
-      "projects": [
-        {
-          "title": "HCI Research & Prototyping",
-          "description": "Tre assignment HCI su teoria, UX research e prototipazione",
-          "longDescription": "Portfolio di tre assignment realizzati per il corso di Human–Computer Interaction presso Aalto University, coprendo l'intero processo HCD (ISO 9241-210). Il lavoro include una valutazione comparativa di prodotti digitali e fisici tramite framework di usabilità e UX, un'analisi dei modelli mentali dell'interfaccia Gmail con proposte di redesign per ridurre il carico cognitivo, e SmaWat — uno smartwatch progettato per bambini attraverso paper prototyping, prototipazione hi-fi su Figma e valutazioni formative Wizard-of-Oz."
-        },
-        {
-          "title": "HCI Research: Dolomiti Superski Usability Report",
-          "description": "Valutazione approfondita dell'usabilità del portale Dolomiti Superski",
-          "longDescription": "Valutazione approfondita dell'esperienza utente condotta sul portale Dolomiti Superski. Il lavoro ha combinato un'Expert Evaluation basata sulle euristiche di Nielsen e del framework MILE, seguita da una fase di User Testing con 20 partecipanti per misurare il Weighted Success Rate (WSR). L'analisi ha permesso di identificare gap critici nell'architettura dell'informazione e proporre soluzioni di redesign mirate all'ottimizzazione dell'efficienza d'uso."
-        },
-        {
-          "title": "Serendipity Yoga: Full-Stack Design & Prototyping",
-          "description": "Progettazione end-to-end di una piattaforma web per un centro yoga",
-          "longDescription": "Progettazione end-to-end di una piattaforma web per un centro yoga, focalizzata sul benessere olistico. Il processo ha incluso la definizione dello schema C-IDM per l'organizzazione dei contenuti, la creazione di wireframe a bassa fedeltà e lo sviluppo di un prototipo interattivo ad alta fedeltà su Figma. Particolare attenzione è stata posta al responsive design e ai flussi di interazione degli utenti (User Stories) per garantire una navigazione fluida e intuitiva."
-        }
-      ]
-    }
-  },
-  "carousel": {
-    "ricerca": "Ricerca e pubblicazioni scientifiche",
-    "full-stack": "Applicazioni web complete",
-    "mobile": "App native e cross-platform",
-    "xr": "Realtà virtuale e aumentata",
-    "consultancy": "Consulenza strategica e tech",
-    "ux-oriented": "Design thinking e UX"
-  },
-  "skills": {
-    "title": "Le Mie ",
-    "highlight": "Competenze",
-    "subtitle": "Tecnologie e strumenti che utilizzo per dare vita alle idee",
-    "categories": {
-      "languages": "Linguaggi di Programmazione",
-      "frameworks": "Framework & Librerie",
-      "tools": "IDE & Strumenti (Software)",
-      "design": "Design & Prototipazione",
-      "soft": "Soft Skills & Certificazioni"
-    },
-    "soft": {
-      "english": "TOEIC C1 (Inglese)",
-      "french": "Francese Base"
-    }
-  },
-  "contact": {
-    "badge": "Contattami",
-    "title": "Lavoriamo ",
-    "highlight": "Insieme",
-    "subtitle": "Hai un progetto in mente? Contattami e discutiamo come posso aiutarti",
-    "infoTitle": "Informazioni di Contatto",
-    "infoDesc": "Sono sempre aperto a discutere nuovi progetti, idee creative o opportunità per far parte delle tue visioni.",
-    "email": "Email",
-    "cv": "Curriculum Vitae",
-    "downloadCv": "Scarica il PDF",
-    "location": "Posizione",
-    "locationValue": "Milano, Italia",
-    "mapDescription": "Posti in cui ho lavorato",
-    "formTitle": "Invia un Messaggio",
-    "nameLabel": "Nome Completo",
-    "namePlaceholder": "Il tuo nome",
-    "emailLabel": "Email",
-    "emailPlaceholder": "tua@email.com",
-    "subjectLabel": "Oggetto",
-    "subjectPlaceholder": "Di cosa vuoi parlare?",
-    "messageLabel": "Messaggio",
-    "messagePlaceholder": "Il tuo messaggio...",
-    "submitBtn": "Invia Messaggio",
-    "successAlert": "Grazie per il tuo messaggio! Ti risponderò al più presto."
-  },
-  "footer": {
-    "brandDesc": "Computer Engineering & HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
-    "quickLinks": "Link Rapidi",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Iscriviti per ricevere aggiornamenti sui miei progetti",
-    "newsletterPlaceholder": "tua@email.com",
-    "subscribe": "Iscriviti",
-    "rights": "Tutti i diritti riservati."
-  }
+    "nav":  {
+                "home":  "Home",
+                "about":  "Chi Sono",
+                "projects":  "Progetti",
+                "skills":  "Competenze",
+                "contact":  "Contatti"
+            },
+    "hero":  {
+                 "greeting":  "Ciao, sono",
+                 "role":  "Computer Engineering \u0026 HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
+                 "projectsBtn":  "Vedi Progetti",
+                 "contactBtn":  "Chi Sono"
+             },
+    "about":  {
+                  "title":  "Creo esperienze digitali che ",
+                  "highlight":  "ispirano",
+                  "description1":  "Sono uno sviluppatore e designer attualmente impegnato in una Double Degree in Human-Computer Interaction and Design presso EIT Digital (Politecnico di Milano e Aalto University).",
+                  "description2":  "Il mio solido background in Ingegneria Informatica, unito alla mia passione per la UI/UX, mi permette di colmare il divario tra l\u0027implementazione tecnica e i bisogni degli utenti.",
+                  "stats":  {
+                                "projects":  "Progetti Sviluppati",
+                                "universities":  "EIT Digital Universities",
+                                "paper":  "Paper in stesura (AI Guardrails)",
+                                "curiosity":  "Curiosità"
+                            },
+                  "sectionJourneyTitle":  "Il mio percorso.",
+                  "sectionApproachTitle":  "Tra design, tecnologia e imprenditorialita.",
+                  "description3":  "Credo che le migliori esperienze digitali nascano all\u0027intersezione tra robustezza ingegneristica e design human-centered, con particolare attenzione alla semplicita d\u0027uso.",
+                  "description4":  "Il minor in Innovation and Entrepreneurship, insieme a corsi come Strategy and Marketing, ha rafforzato il mio orientamento verso il mondo imprenditoriale e delle startup.",
+                  "interestsTitle":  "I miei interessi e hobby",
+                  "interestsSubtitle":  "Alcune foto a cui sono affezionato del mio ultimo periodo",
+                  "interestsBody":  "Amo la musica di ogni genere e suono il clarinetto. Sono un grande appassionato di sport, dal calcio allo sci, e amo stare a contatto con la natura, tra escursioni in montagna e nuovi viaggi.\n\nQueste immagini raccontano alcuni momenti del mio ultimo periodo che per me hanno un significato speciale."
+              },
+    "projects":  {
+                     "title":  "Progetti in ",
+                     "highlight":  "Evidenza",
+                     "subtitle":  "Esplora i miei progetti organizzati per categoria",
+                     "explore":  "Esplora progetti"
+                 },
+    "category":  {
+                     "backBtn":  "Torna ai Progetti",
+                     "notFound":  "Categoria non trovata",
+                     "backHome":  "Torna alla Home",
+                     "codeBtn":  "Codice",
+                     "demoBtn":  "Demo Live"
+                 },
+    "categories":  {
+                       "ricerca":  {
+                                       "title":  "Ricerca",
+                                       "description":  "Progetti di ricerca e sviluppo che esplorano nuove tecnologie e metodologie",
+                                       "projects":  [
+                                                        {
+                                                            "title":  "LLM Guardrails Research",
+                                                            "description":  "Ricerca su safety guardrails per Large Language Models",
+                                                            "longDescription":  "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora lo sviluppo e l\u0027implementazione di meccanismi di sicurezza per mitigare i rischi e promuovere un deployment responsabile dell\u0027Intelligenza Artificiale, con un paper accademico attualmente in fase di stesura."
+                                                        },
+                                                        {
+                                                            "title":  "HoloLimb-CR",
+                                                            "description":  "Sistema portatile Cross-Reality (CR) per supportare la terapia del dolore da arto fantasma.",
+                                                            "longDescription":  "HoloLimb-CR è un\u0027innovativa piattaforma di riabilitazione AR/VR per la gestione non farmacologica del dolore da arto fantasma (PLP). Sviluppata per Meta Quest 3, l\u0027architettura garantisce transizioni fluide tra ambienti virtuali e aumentati, offrendo esercizi terapeutici strutturati e tracciamento anatomico accurato in un\u0027esperienza ottimizzata per l\u0027uso domestico e indipendente. Il paper relativo allo studio (\u0027HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality\u0027) è stato accettato alla conferenza internazionale ICIR 2026."
+                                                        }
+                                                    ]
+                                   },
+                       "full-stack":  {
+                                          "title":  "Full-Stack Development",
+                                          "description":  "Applicazioni web complete con frontend moderno e backend robusto",
+                                          "projects":  [
+                                                           {
+                                                               "title":  "Artendity",
+                                                               "description":  "Applicazione web iterattiva per scoprire la propria \"Art DNA\"",
+                                                               "longDescription":  "Sviluppato per il corso Design of WWW Services. Artendity permette agli utenti di eseguire un quiz visivo per scoprire le proprie preferenze artistiche, ricevendo raccomandazioni personalizzate e navigando una galleria interattiva."
+                                                           },
+                                                           {
+                                                               "title":  "Yoga Website",
+                                                               "description":  "Sito web interattivo dedicato allo Yoga",
+                                                               "longDescription":  "Costruito per il corso Hypermedia Applications, questo sito web combina un\u0027architettura full-stack con contenuti multimediali interattivi, offrendo un\u0027esperienza utente ottimizzata e focus sul design responsivo."
+                                                           }
+                                                       ]
+                                      },
+                       "mobile":  {
+                                      "title":  "Mobile Development",
+                                      "description":  "Applicazioni mobile native e cross-platform per iOS e Android",
+                                      "projects":  [
+                                                       {
+                                                           "title":  "Flutter Flame Memory Game",
+                                                           "description":  "Memory card game cross-platform alimentato da motore Flame",
+                                                           "longDescription":  "Un gioco di memoria device-agnostic sviluppato in Flutter, con interfacce responsive. Offre una progressione dei livelli persistente utilizzando Hive e adotta un robusto approccio di state management."
+                                                       },
+                                                       {
+                                                           "title":  "Breakout Game",
+                                                           "description":  "Clone cross-platform di Breakout sviluppato con Flutter e Flame",
+                                                           "longDescription":  "Una rivisitazione moderna del classico gioco arcade Breakout, sviluppata utilizzando Flutter e il motore Flame. Presenta un design responsivo, rilevamento delle collisioni e meccaniche di gioco fluide."
+                                                       }
+                                                   ]
+                                  },
+                       "xr":  {
+                                  "title":  "XR Projects",
+                                  "description":  "Progetti di realtà virtuale, aumentata e mista",
+                                  "projects":  [
+                                                   {
+                                                       "title":  "Hololimb",
+                                                       "description":  "App XR per la riabilitazione attraverso l\u0027illusione visiva",
+                                                       "longDescription":  "In collaborazione con i3lab (Polimi), Hololimb è un\u0027app per Meta Quest 3 mirata a ridurre il dolore da arto fantasma (PLP), simulando un arto virtuale a supporto della terapia di riabilitazione del paziente."
+                                                   },
+                                                   {
+                                                       "title":  "CodingVirtualWorlds",
+                                                       "description":  "Programmazione e simulazione di mondi interattivi in VR",
+                                                       "longDescription":  "Progetto per il corso Coding Virtual Worlds: design e implementazione di molteplici ambienti VR interattivi per Meta Quest 3, culminato nello sviluppo di un gioco multiplayer in rete."
+                                                   }
+                                               ]
+                              },
+                       "consultancy":  {
+                                           "title":  "Consultancy",
+                                           "description":  "Progetti di consulenza strategica e implementazione tecnologica",
+                                           "projects":  [
+                                                            {
+                                                                "title":  "HR Consulting - SACE S.p.A.",
+                                                                "description":  "Raccomandazioni strategiche e tecniche per migliorare i tool HR digitali",
+                                                                "longDescription":  "Progetto di consulenza per SACE S.p.A. sviluppato durante il corso Digital Business Innovation Lab. L\u0027obiettivo era valutare e migliorare l\u0027adozione delle piattaforme HR interne (Workday, Coursera, SAM Chatbot). Sulla base di analisi qualitative e user research, abbiamo progettato \u0027SACE Human+\u0027, un ecosistema basato sull\u0027AI sviluppato su 3 pilastri che include un\u0027app gamificata per i dipendenti (GrowPlay), una dashboard di supporto decisionale AI per i manager e una piattaforma di community."
+                                                            }
+                                                        ]
+                                       },
+                       "ux-oriented":  {
+                                           "title":  "UX-Oriented",
+                                           "description":  "Progetti focalizzati sull\u0027esperienza utente e design thinking",
+                                           "projects":  [
+                                                            {
+                                                                "title":  "HCI Research \u0026 Prototyping",
+                                                                "description":  "Tre assignment HCI su teoria, UX research e prototipazione",
+                                                                "longDescription":  "Portfolio di tre assignment realizzati per il corso di Human–Computer Interaction presso Aalto University, coprendo l\u0027intero processo HCD (ISO 9241-210). Il lavoro include una valutazione comparativa di prodotti digitali e fisici tramite framework di usabilità e UX, un\u0027analisi dei modelli mentali dell\u0027interfaccia Gmail con proposte di redesign per ridurre il carico cognitivo, e SmaWat — uno smartwatch progettato per bambini attraverso paper prototyping, prototipazione hi-fi su Figma e valutazioni formative Wizard-of-Oz."
+                                                            },
+                                                            {
+                                                                "title":  "HCI Research: Dolomiti Superski Usability Report",
+                                                                "description":  "Valutazione approfondita dell\u0027usabilità del portale Dolomiti Superski",
+                                                                "longDescription":  "Valutazione approfondita dell\u0027esperienza utente condotta sul portale Dolomiti Superski. Il lavoro ha combinato un\u0027Expert Evaluation basata sulle euristiche di Nielsen e del framework MILE, seguita da una fase di User Testing con 20 partecipanti per misurare il Weighted Success Rate (WSR). L\u0027analisi ha permesso di identificare gap critici nell\u0027architettura dell\u0027informazione e proporre soluzioni di redesign mirate all\u0027ottimizzazione dell\u0027efficienza d\u0027uso."
+                                                            },
+                                                            {
+                                                                "title":  "Serendipity Yoga: Full-Stack Design \u0026 Prototyping",
+                                                                "description":  "Progettazione end-to-end di una piattaforma web per un centro yoga",
+                                                                "longDescription":  "Progettazione end-to-end di una piattaforma web per un centro yoga, focalizzata sul benessere olistico. Il processo ha incluso la definizione dello schema C-IDM per l\u0027organizzazione dei contenuti, la creazione di wireframe a bassa fedeltà e lo sviluppo di un prototipo interattivo ad alta fedeltà su Figma. Particolare attenzione è stata posta al responsive design e ai flussi di interazione degli utenti (User Stories) per garantire una navigazione fluida e intuitiva."
+                                                            }
+                                                        ]
+                                       }
+                   },
+    "carousel":  {
+                     "ricerca":  "Ricerca e pubblicazioni scientifiche",
+                     "full-stack":  "Applicazioni web complete",
+                     "mobile":  "App native e cross-platform",
+                     "xr":  "Realtà virtuale e aumentata",
+                     "consultancy":  "Consulenza strategica e tech",
+                     "ux-oriented":  "Design thinking e UX"
+                 },
+    "skills":  {
+                   "title":  "Le Mie ",
+                   "highlight":  "Competenze",
+                   "subtitle":  "Tecnologie e strumenti che utilizzo per dare vita alle idee",
+                   "categories":  {
+                                      "languages":  "Linguaggi di Programmazione",
+                                      "frameworks":  "Framework \u0026 Librerie",
+                                      "tools":  "IDE \u0026 Strumenti (Software)",
+                                      "design":  "Design \u0026 Prototipazione",
+                                      "soft":  "Soft Skills \u0026 Certificazioni"
+                                  },
+                   "soft":  {
+                                "english":  "TOEIC C1 (Inglese)",
+                                "french":  "Francese Base"
+                            }
+               },
+    "contact":  {
+                    "badge":  "Contattami",
+                    "title":  "Lavoriamo ",
+                    "highlight":  "Insieme",
+                    "subtitle":  "Hai un progetto in mente? Contattami e discutiamo come posso aiutarti",
+                    "infoTitle":  "Informazioni di Contatto",
+                    "infoDesc":  "Sono sempre aperto a discutere nuovi progetti, idee creative o opportunità per far parte delle tue visioni.",
+                    "email":  "Email",
+                    "cv":  "Curriculum Vitae",
+                    "downloadCv":  "Scarica il PDF",
+                    "location":  "Posizione",
+                    "locationValue":  "Milano, Italia",
+                    "mapDescription":  "Posti in cui ho lavorato",
+                    "formTitle":  "Invia un Messaggio",
+                    "nameLabel":  "Nome Completo",
+                    "namePlaceholder":  "Il tuo nome",
+                    "emailLabel":  "Email",
+                    "emailPlaceholder":  "tua@email.com",
+                    "subjectLabel":  "Oggetto",
+                    "subjectPlaceholder":  "Di cosa vuoi parlare?",
+                    "messageLabel":  "Messaggio",
+                    "messagePlaceholder":  "Il tuo messaggio...",
+                    "submitBtn":  "Invia Messaggio",
+                    "successAlert":  "Grazie per il tuo messaggio! Ti risponderò al più presto."
+                },
+    "footer":  {
+                   "brandDesc":  "Computer Engineering \u0026 HCID Student appassionato di interfacce utente ed esperienze digitali moderne.",
+                   "quickLinks":  "Link Rapidi",
+                   "newsletter":  "Newsletter",
+                   "newsletterDesc":  "Iscriviti per ricevere aggiornamenti sui miei progetti",
+                   "newsletterPlaceholder":  "tua@email.com",
+                   "subscribe":  "Iscriviti",
+                   "rights":  "Tutti i diritti riservati."
+               }
 }
