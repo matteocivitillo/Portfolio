@@ -52,6 +52,12 @@ export function Projects() {
       <div className="max-w-6xl mx-auto flex flex-col items-center relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <div className="w-2 h-2 rounded-full bg-blue-600 dark:bg-white shadow-[0_0_10px_rgba(37,99,235,0.5)] dark:shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+            <span className="text-xs tracking-[0.2em] font-medium text-gray-500 dark:text-gray-400 uppercase">
+              {t('nav.projects')}
+            </span>
+          </div>
           <ScrollTypewriter
             text={projectsTitle}
             highlightText={t('projects.highlight')}

@@ -1,15 +1,14 @@
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
   const location = useLocation();
-  
+
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
 
@@ -19,7 +18,6 @@ export function Navbar() {
     { id: 'projects', name: t('nav.projects'), to: '/projects' },
   ];
 
-  // Track active section based on route
   useEffect(() => {
     const path = location.pathname;
     if (path === '/' || path === '') {
@@ -34,7 +32,6 @@ export function Navbar() {
   }, [location.pathname]);
 
   const handleNavClick = (id: string) => {
-    setIsOpen(false);
     setActiveTab(id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -49,15 +46,14 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 mt-4 pointer-events-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-center h-16 pointer-events-auto">
-          
-          {/* Centered Floating Pill Navigation */}
-          <div className="hidden md:flex items-center p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
+          {/* Floating Pill Navigation (always expanded) */}
+          <div className="flex items-center p-1 sm:p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
             {navLinks.map((link) => (
               <Link
                 key={link.id}
                 to={link.to}
                 onClick={() => handleNavClick(link.id)}
-                className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-300 ${
+                className={`relative px-2.5 sm:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap transition-colors duration-300 ${
                   activeTab === link.id
                     ? 'text-gray-900 dark:text-white'
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
@@ -68,13 +64,12 @@ export function Navbar() {
                     <motion.div
                       layoutId="nav-active-bg"
                       className="absolute inset-0 bg-gray-100 dark:bg-[#2a2a2a] rounded-full z-0"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                     />
-                    {/* Top glow indicator mimicking reference image */}
                     <motion.div
                       layoutId="nav-active-indicator"
-                      className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-6 h-[3px] rounded-full bg-blue-600 dark:bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] z-10"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-5 sm:w-6 h-[3px] rounded-full bg-blue-600 dark:bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] z-10"
+                      transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                     />
                   </>
                 )}
@@ -83,83 +78,28 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Right side controls (Language & Theme) */}
+          {/* Right side controls */}
           <div className="absolute right-0 flex items-center gap-2">
-            
-            {/* Desktop Controls */}
-            <div className="hidden md:flex items-center gap-2 p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
-               <button
-                  onClick={toggleLanguage}
-                  className="px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] transition-all cursor-pointer"
-                  aria-label="Toggle Language"
-                >
-                  {i18n.language === 'en' ? 'IT' : 'EN'}
-               </button>
-
-               <button
-                  onClick={toggleTheme}
-                  className="p-1.5 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] transition-all cursor-pointer"
-                  aria-label="Toggle Theme"
-                >
-                  {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-               </button>
-            </div>
-
-            {/* Mobile menu button and controls */}
-            <div className="flex md:hidden items-center gap-2 p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm">
+            <div className="flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
               <button
-                 onClick={toggleLanguage}
-                 className="px-2 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] rounded-full transition-all cursor-pointer"
-               >
-                 {i18n.language === 'en' ? 'IT' : 'EN'}
-              </button>
-              <button
-                 onClick={toggleTheme}
-                 className="p-1.5 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] transition-all cursor-pointer"
-               >
-                 {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-[#2a2a2a] text-gray-900 dark:text-gray-100 transition-all cursor-pointer"
+                onClick={toggleLanguage}
+                className="px-2 sm:px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] transition-all cursor-pointer"
+                aria-label="Toggle Language"
               >
-                {isOpen ? <X size={18} /> : <Menu size={18} />}
+                {i18n.language === 'en' ? 'IT' : 'EN'}
+              </button>
+
+              <button
+                onClick={toggleTheme}
+                className="p-1.5 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#2a2a2a] transition-all cursor-pointer"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
               </button>
             </div>
-
           </div>
-
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mx-4 mt-2 p-2 rounded-2xl bg-white/90 dark:bg-[#1a1a1a]/90 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-lg pointer-events-auto transition-colors duration-300"
-          >
-            <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.id}
-                  to={link.to}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                    activeTab === link.id
-                      ? 'bg-gray-100 dark:bg-[#2a2a2a] text-gray-900 dark:text-white'
-                      : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-[#2a2a2a]/50'
-                  }`}
-                  onClick={() => handleNavClick(link.id)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </nav>
   );
 }

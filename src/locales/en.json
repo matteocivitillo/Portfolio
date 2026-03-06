@@ -22,7 +22,14 @@
       "universities": "EIT Digital Universities",
       "paper": "Paper in progress (AI Guardrails)",
       "curiosity": "Curiosity"
-    }
+    },
+    "sectionJourneyTitle": "My background and journey.",
+    "sectionApproachTitle": "Where design, technology, and entrepreneurship meet.",
+    "description3": "I believe the best digital experiences are built at the intersection of strong engineering and human-centered design, with a clear focus on usability.",
+    "description4": "My minor in Innovation and Entrepreneurship, together with courses such as Strategy and Marketing, strengthened my orientation toward the entrepreneurial and startup world.",
+    "interestsTitle": "My interests and hobbies",
+    "interestsSubtitle": "Some photos I am attached to from my recent period",
+    "interestsBody": "I am a big fan of music of all kinds, I play the clarinet, and I enjoy sports and traveling. Some of these images capture moments from my recent period that are especially meaningful to me."
   },
   "projects": {
     "title": "Featured ",

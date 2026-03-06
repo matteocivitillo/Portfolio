@@ -161,7 +161,7 @@ export function CategoryPage() {
         </div>
 
         {/* Projects List - Centered Scroll Layout */}
-        <div className="flex flex-col gap-20 pb-32">
+        <div className="flex flex-col gap-20 pb-32 lg:pb-[30vh]">
           {meta.projects.map((project, index) => (
             <ProjectDisplay 
               key={index} 
