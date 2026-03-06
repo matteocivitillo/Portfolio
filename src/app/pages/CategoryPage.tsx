@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
@@ -142,12 +143,12 @@ export function CategoryPage() {
     <div className="min-h-screen bg-background transition-colors duration-300 pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Button */}
-        <a href="/#projects">
-          <Button variant="ghost" className="mb-8 group text-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
+        <Link to="/projects" className="inline-block mb-8">
+          <Button variant="ghost" className="group text-gray-700 dark:text-gray-300 dark:hover:bg-gray-800">
             <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             {t('category.backBtn')}
           </Button>
-        </a>
+        </Link>
 
         {/* Header */}
         <div className="mb-16">
@@ -159,93 +160,122 @@ export function CategoryPage() {
           </p>
         </div>
 
-        {/* Projects List - Alternating Layout */}
-        <div className="space-y-24">
-          {meta.projects.map((project, index) => {
-            const isEven = index % 2 === 0;
-            const projectTitle = t(`categories.${categoryId}.projects.${index}.title`);
-            const projectLongDesc = t(`categories.${categoryId}.projects.${index}.longDescription`);
-
-            return (
-              <div
-                key={index}
-                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } gap-12 items-center`}
-              >
-                {/* Image / Live Preview */}
-                <div className="w-full lg:w-1/2">
-                  {project.iframeUrl ? (
-                    <IframePreview url={project.iframeUrl} title={projectTitle} />
-                    ) : project.pdfUrl ? (
-                    <PdfPreview
-                      pdfUrl={project.pdfUrl}
-                      title={projectTitle}
-                    />
-                    ) : project.videoUrl ? (
-                    <HoverVideoPlayer
-                      videoUrl={project.videoUrl}
-                      posterUrl={project.image}
-                      title={projectTitle}
-                    />
-                  ) : (
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                      <img
-                        src={project.image}
-                        alt={projectTitle}
-                        className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="w-full lg:w-1/2 space-y-6">
-                  <div>
-                    <h2 className="text-3xl sm:text-4xl text-gray-900 dark:text-white mb-4">
-                      {projectTitle}
-                    </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
-                      {projectLongDesc}
-                    </p>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary" className="dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  {(project.github || project.demo) && (
-                    <div className="flex gap-4 pt-4">
-                      {project.github && (
-                        <a href={project.github}>
-                          <Button variant="outline" className="gap-2 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
-                            <Github size={18} />
-                            {t('category.codeBtn')}
-                          </Button>
-                        </a>
-                      )}
-                      {project.demo && (
-                        <a href={project.demo}>
-                          <Button className="gap-2 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-600 dark:hover:bg-blue-700">
-                            <ExternalLink size={18} />
-                            {t('category.demoBtn')}
-                          </Button>
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+        {/* Projects List - Centered Scroll Layout */}
+        <div className="flex flex-col gap-20 pb-32">
+          {meta.projects.map((project, index) => (
+            <ProjectDisplay 
+              key={index} 
+              project={project} 
+              index={index} 
+              categoryId={categoryId} 
+              t={t} 
+            />
+          ))}
         </div>
       </div>
     </div>
+  );
+}
+
+// Sub-component to handle scroll animations for each project
+function ProjectDisplay({ project, index, categoryId, t }: any) {
+  const isEven = index % 2 === 0;
+  const projectTitle = t(`categories.${categoryId}.projects.${index}.title`);
+  const projectLongDesc = t(`categories.${categoryId}.projects.${index}.longDescription`);
+
+  const ref = useRef<HTMLDivElement>(null);
+  
+  // Track this element's position relative to viewport
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "0.5 0.5"] // Starts when top of element hits bottom of viewport, ends when center hits center of viewport
+  });
+
+  // Transform values based on scroll progress
+  const blurValue = useTransform(scrollYProgress, [0, 1], [20, 0]);
+  const animatedBlurFilter = useTransform(blurValue, (v) => `blur(${v}px)`);
+  const blurFilter = index === 0 ? 'blur(0px)' : animatedBlurFilter;
+  
+  const animatedScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scale = index === 0 ? 1 : animatedScale;
+  
+  const animatedOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const opacity = index === 0 ? 1 : animatedOpacity;
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{ filter: blurFilter, scale, opacity }}
+      className={`min-h-[40vh] flex flex-col ${
+        isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+      } gap-12 items-center justify-center`}
+    >
+      {/* Image / Live Preview */}
+      <div className="w-full lg:w-1/2">
+        {project.iframeUrl ? (
+          <IframePreview url={project.iframeUrl} title={projectTitle} />
+        ) : project.pdfUrl ? (
+          <PdfPreview pdfUrl={project.pdfUrl} title={projectTitle} />
+        ) : project.videoUrl ? (
+          <HoverVideoPlayer
+            videoUrl={project.videoUrl}
+            posterUrl={project.image}
+            title={projectTitle}
+          />
+        ) : (
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl group w-full aspect-video">
+            <img
+              src={project.image}
+              alt={projectTitle}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="w-full lg:w-1/2 space-y-6">
+        <div>
+          <h2 className="text-3xl sm:text-4xl text-gray-900 dark:text-white mb-4 leading-tight">
+            {projectTitle}
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            {projectLongDesc}
+          </p>
+        </div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag: string, tagIndex: number) => (
+            <Badge key={tagIndex} variant="secondary" className="dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
+              {tag}
+            </Badge>
+          ))}
+        </div>
+
+        {/* Links */}
+        {(project.github || project.demo) && (
+          <div className="flex gap-4 pt-4">
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noreferrer">
+                <Button variant="outline" className="gap-2 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800">
+                  <Github size={18} />
+                  {t('category.codeBtn')}
+                </Button>
+              </a>
+            )}
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noreferrer">
+                <Button className="gap-2 bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-600 dark:hover:bg-blue-700">
+                  <ExternalLink size={18} />
+                  {t('category.demoBtn')}
+                </Button>
+              </a>
+            )}
+          </div>
+        )}
+      </div>
+    </motion.div>
   );
 }

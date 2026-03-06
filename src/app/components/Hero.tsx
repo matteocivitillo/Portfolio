@@ -1,6 +1,7 @@
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
@@ -129,17 +130,17 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <a href="#projects">
+              <Link to="/about">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 text-white">
-                  {t('hero.projectsBtn')}
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
-              <a href="mailto:matteo.civitillo.work@gmail.com">
-                <Button size="lg" variant="outline" className="dark:border-border dark:text-foreground dark:hover:bg-muted">
                   {t('hero.contactBtn')}
                 </Button>
-              </a>
+              </Link>
+              <Link to="/projects">
+                <Button size="lg" variant="outline" className="dark:border-border dark:text-foreground dark:hover:bg-muted group">
+                  {t('hero.projectsBtn')}
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </motion.div>
           )}
 

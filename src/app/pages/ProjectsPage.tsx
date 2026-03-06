@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
-import { Hero } from '../components/Hero';
+import { Projects } from '../components/Projects';
+import { ScrollSection } from '../components/ScrollSection';
 
-export function Home() {
+export function ProjectsPage() {
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -20,8 +21,10 @@ export function Home() {
   }, [hash]);
 
   return (
-    <div className="transition-colors">
-      <Hero />
+    <div className="transition-colors pt-16">
+      <ScrollSection id="projects">
+        <Projects />
+      </ScrollSection>
     </div>
   );
 }

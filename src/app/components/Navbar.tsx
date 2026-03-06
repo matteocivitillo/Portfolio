@@ -1,6 +1,6 @@
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { motion, AnimatePresence } from 'motion/react';
@@ -8,81 +8,35 @@ import { motion, AnimatePresence } from 'motion/react';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('home');
-  const [recentlyClicked, setRecentlyClicked] = useState<string | null>(null);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
   
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
 
   const navLinks = [
-    { id: 'home', name: t('nav.home'), href: '#home' },
-    { id: 'about', name: t('nav.about'), href: '#about' },
-    { id: 'projects', name: t('nav.projects'), href: '#projects' },
-    { id: 'skills', name: t('nav.skills'), href: '#skills' },
-    { id: 'contact', name: t('nav.contact'), href: '#contact' },
+    { id: 'home', name: t('nav.home'), to: '/' },
+    { id: 'about', name: t('nav.about'), to: '/about' },
+    { id: 'projects', name: t('nav.projects'), to: '/projects' },
   ];
 
-  // Track active section based on scroll
+  // Track active section based on route
   useEffect(() => {
-    if (!isHomePage) return;
-    
-    const handleScroll = () => {
-      // Don't update if user just clicked - wait for scroll to finish
-      if (recentlyClicked) return;
-      
-      const sections = navLinks.map(link => link.id);
-      let current = 'home';
-      let closestDistance = Infinity;
-      
-      // Find which section is closest to the top of the viewport
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top;
-          
-          // Calculate the center of the viewport (approximate scroll position)
-          // We want to find the section whose top is closest to the middle of what's visible
-          const distanceFromTop = Math.abs(elementTop);
-          
-          // Prefer sections that are in the upper half of the viewport
-          if (elementTop < window.innerHeight && elementTop > -rect.height) {
-            if (distanceFromTop < closestDistance) {
-              closestDistance = distanceFromTop;
-              current = sectionId;
-            }
-          }
-        }
-      }
-      setActiveTab(current);
-    };
+    const path = location.pathname;
+    if (path === '/' || path === '') {
+      setActiveTab('home');
+    } else if (path.includes('projects') || path.includes('progetti')) {
+      setActiveTab('projects');
+    } else if (path.includes('about')) {
+      setActiveTab('about');
+    } else {
+      setActiveTab('');
+    }
+  }, [location.pathname]);
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [navLinks, isHomePage, recentlyClicked]);
-
-  const handleNavClick = (href: string, id: string) => {
+  const handleNavClick = (id: string) => {
     setIsOpen(false);
     setActiveTab(id);
-    setRecentlyClicked(id);
-    
-    // Reset the recently clicked state after scroll animation completes
-    setTimeout(() => setRecentlyClicked(null), 1000);
-    
-    // If we're not on home page and clicking a hash link, navigate to home with the hash
-    if (!isHomePage && href.startsWith('#')) {
-      // Navigate to home page with the hash
-      window.location.href = window.location.origin + window.location.pathname + href;
-    } else if (href.startsWith('#')) {
-      // Scroll to element with a small delay to ensure DOM is ready
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 0);
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleLanguage = () => {
@@ -99,10 +53,10 @@ export function Navbar() {
           {/* Centered Floating Pill Navigation */}
           <div className="hidden md:flex items-center p-1.5 rounded-full bg-white/70 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-gray-200/50 dark:border-white/10 shadow-sm transition-colors duration-300">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.id}
-                href={link.href}
-                onClick={() => handleNavClick(link.href, link.id)}
+                to={link.to}
+                onClick={() => handleNavClick(link.id)}
                 className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-300 ${
                   activeTab === link.id
                     ? 'text-gray-900 dark:text-white'
@@ -125,7 +79,7 @@ export function Navbar() {
                   </>
                 )}
                 <span className="relative z-10">{link.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -189,18 +143,18 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.id}
-                  href={link.href}
+                  to={link.to}
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                     activeTab === link.id
                       ? 'bg-gray-100 dark:bg-[#2a2a2a] text-gray-900 dark:text-white'
                       : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-[#2a2a2a]/50'
                   }`}
-                  onClick={() => handleNavClick(link.href, link.id)}
+                  onClick={() => handleNavClick(link.id)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
