@@ -27,12 +27,14 @@ export function AboutPage() {
       <ScrollSection id="about">
         <About />
       </ScrollSection>
-      <ScrollSection id="skills">
+      <ScrollSection id="skills" className="min-h-0 items-start">
         <Skills />
       </ScrollSection>
-      <ScrollSection id="contact">
+      <ScrollSection id="contact" className="min-h-0 items-start">
         <Contact />
       </ScrollSection>
     </div>
   );
 }
+
+

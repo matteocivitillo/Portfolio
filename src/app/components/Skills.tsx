@@ -47,7 +47,7 @@ export function Skills() {
   const skillsTitle = t('skills.title') + t('skills.highlight');
 
   return (
-    <div className="py-32 px-4 sm:px-6 lg:px-8">
+    <div className="py-0 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">

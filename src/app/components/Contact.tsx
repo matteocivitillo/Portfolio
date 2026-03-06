@@ -5,6 +5,7 @@ import { ScrollTypewriter } from './ScrollTypewriter';
 import { ScrollReveal } from './ScrollReveal';
 import { PixelatedCanvas } from "./ui/pixelated-canvas";
 import pictureImg from '../../images/picture2.jpeg';
+import cvPdf from '../../pdf/Matteo_Civitillo_CV.pdf';
 
 export function Contact() {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ export function Contact() {
       icon: <FileText size={24} />,
       label: t("contact.cv"),
       value: t("contact.downloadCv"),
-      href: "src\\pdf\\Matteo_Civitillo_CV.pdf",
+      href: cvPdf,
       download: true,
     },
     {
@@ -34,7 +35,7 @@ export function Contact() {
   const contactTitle = t("contact.title") + " " + t("contact.highlight");
 
   return (
-    <div className="py-16 lg:py-32 px-4 sm:px-6 lg:px-8">
+    <div className="py-16 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10 lg:mb-20">
@@ -122,3 +123,4 @@ export function Contact() {
     </div>
   );
 }
+
