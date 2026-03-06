@@ -42,7 +42,7 @@ export const AnimatedTestimonials = ({
   const content = fixedContent ?? testimonials[active];
 
   return (
-    <div className="w-full py-6">
+    <div className="w-full py-6 overflow-x-hidden">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:items-center">
         <div>
           <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-visible bg-gray-100 dark:bg-[#111] border border-gray-200 dark:border-white/5 shadow-xl dark:shadow-2xl">
@@ -126,6 +126,7 @@ export const AnimatedTestimonials = ({
     </div>
   );
 };
+
 
 
 

@@ -34,7 +34,7 @@ export function About() {
   ];
 
   return (
-    <div className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent min-h-screen">
+    <div className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent min-h-screen overflow-x-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         {/* Header Section */}
         <ScrollReveal delay={100} direction="up" className="w-full flex flex-col items-center text-center mb-32">
@@ -123,6 +123,7 @@ export function About() {
     </div>
   );
 }
+
 
 
 
