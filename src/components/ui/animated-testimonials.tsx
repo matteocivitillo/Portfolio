@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
     <div className="w-full py-6 overflow-x-hidden">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 md:items-center">
         <div>
-          <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-visible bg-gray-100 dark:bg-[#111] border border-gray-200 dark:border-white/5 shadow-xl dark:shadow-2xl">
+          <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-visible bg-gray-100 dark:bg-[#111] border border-gray-200 dark:border-white/5 shadow-xl dark:shadow-2xl cursor-pointer select-none" role="button" tabIndex={0} onClick={handleNext} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleNext()} aria-label="Next image">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -126,6 +126,7 @@ export const AnimatedTestimonials = ({
     </div>
   );
 };
+
 
 
 
