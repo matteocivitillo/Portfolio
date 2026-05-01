@@ -52,12 +52,12 @@
         {
           "title": "LLM Guardrails Research",
           "description": "Ricerca su safety guardrails per Large Language Models",
-          "longDescription": "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora lo sviluppo e l'implementazione di meccanismi di sicurezza per mitigare i rischi e promuovere un deployment responsabile dell'Intelligenza Artificiale, con un paper accademico attualmente in fase di stesura."
+          "longDescription": "In collaborazione con i professori Matteo Camilli e Giovanni Quattrocchi al Politecnico di Milano. Il progetto esplora meccanismi di sicurezza per mitigare i rischi nei Large Language Models (LLMs), con focus sulla robustezza avversariale e il deployment responsabile dell'AI. Un paper accademico è stato sottomesso a ISSRE 2026."
         },
         {
           "title": "HoloLimb-CR",
           "description": "Sistema portatile Cross-Reality (CR) per supportare la terapia del dolore da arto fantasma.",
-          "longDescription": "HoloLimb-CR è un'innovativa piattaforma di riabilitazione AR/VR per la gestione non farmacologica del dolore da arto fantasma (PLP). Sviluppata per Meta Quest 3, l'architettura garantisce transizioni fluide tra ambienti virtuali e aumentati, offrendo esercizi terapeutici strutturati e tracciamento anatomico accurato in un'esperienza ottimizzata per l'uso domestico e indipendente. Il paper relativo allo studio ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') è stato accettato alla conferenza internazionale ICIR 2026."
+          "longDescription": "HoloLimb-CR è un'innovativa piattaforma di riabilitazione AR/VR per la gestione non farmacologica del dolore da arto fantasma (PLP). Sviluppata per Meta Quest 3, l'architettura garantisce transizioni fluide tra ambienti virtuali e aumentati, offrendo esercizi terapeutici strutturati e tracciamento anatomico accurato in un'esperienza ottimizzata per l'uso domestico e indipendente. Il paper relativo allo studio ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') è stato accettato alla conferenza internazionale IEEE ICIR 2026 (in press)."
         }
       ]
     },

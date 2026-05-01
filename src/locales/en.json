@@ -52,12 +52,12 @@
         {
           "title": "LLM Guardrails Research",
           "description": "Research on safety guardrails for Large Language Models",
-          "longDescription": "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores the development and implementation of safety mechanisms to mitigate risks and promote responsible deployment of Artificial Intelligence, with an academic paper currently in progress."
+          "longDescription": "In collaboration with professors Matteo Camilli and Giovanni Quattrocchi at Politecnico di Milano. The project explores safety mechanisms to mitigate risks in Large Language Models (LLMs), with a focus on adversarial robustness and responsible AI deployment. An academic paper has been submitted to ISSRE 2026."
         },
         {
           "title": "HoloLimb-CR",
           "description": "Portable Cross-Reality (CR) system to support phantom limb pain therapy.",
-          "longDescription": "HoloLimb-CR is an innovative AR/VR rehabilitation platform for the non-pharmacological management of Phantom Limb Pain (PLP). Developed for Meta Quest 3, the architecture enables seamless transitions between virtual and augmented environments, offering structured therapeutic exercises and accurate anatomical tracking in an experience optimized for independent home use. The related research paper ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') has been accepted at the ICIR 2026 international conference."
+          "longDescription": "HoloLimb-CR is an innovative AR/VR rehabilitation platform for the non-pharmacological management of Phantom Limb Pain (PLP). Developed for Meta Quest 3, the architecture enables seamless transitions between virtual and augmented environments, offering structured therapeutic exercises and accurate anatomical tracking in an experience optimized for independent home use. The related research paper ('HoloLimb-CR: Advancing Phantom Limb Pain Therapy Through Cross-Reality') has been accepted at the IEEE ICIR 2026 international conference (in press)."
         }
       ]
     },
